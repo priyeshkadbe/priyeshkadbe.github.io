@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /**
+  *   Main colors
+  */
+  --main-dark-color: #121212;
+  --main-light-color: #f1f1f1;
+  --main-dark-font-color: #e7e7e7;
+  --main-light-font-color: #1b1b1b;
+  --middle-font-color: #888;
+  --secondary-dark-font-color: #c3c3c3;
+  --secondary-light-font-color: #444444;
+  --footer-light-background: #f5f5f5;
+  --footer-dark-background: #181717;
+  --dark-background: #181717;
+  --light-background: #f5f5f5;
+  --card-dark-background: #1e1e1e;
+  --card-light-background: #f9f9f9f9;
+
+  /**
+  *   Gradient colors
+  */
+  --gradient-design-start: #030cfa;
+  --gradient-design-stop: #01f1ff;
+  --gradient-develop-start: #a600ff;
+  --gradient-develop-stop: #ff00ff;
+  --gradient-deploy-start: #01961c;
+  --gradient-deploy-stop: #23ff00;
+  --gradient-boost-start: #ff4d4d;
+  --gradient-boost-stop: #f9cb28;
+
+  /**
+  *   CSS properties
+  */
+  --border-radius: 8px;
+  --slide-transition: all 0.6s cubic-bezier(0.06, 0.79, 0.19, 0.95);
+  --theme-transition-delay: 0.3s;
+  --transition-delay: 0.3s;
+  --middle-transition-delay: 0.5s;
+  --long-transition-delay: 1s;
+  --font-weight: 800;
+  --line-height: 1.2;
+  --letter-spacing: -0.06rem;
+  --middle-letter-spacing: 0.3rem;
+  --big-letter-spacing: 1rem;
+
+  /** 
+  *   Other
+  */
+  --docker-color: #539be8;
+  --linkedin-color: #2d64bc;
+  --git-prompt-arrow: #8df77b;
+  --git-prompt-user: #7ad2db;
+  --git-prompt-git: #89befa;
+  --git-prompt-branch: #f2a59c;
+  /* --git-prompt-user: #69c0cd; */
+  /* --git-prompt-git: #5b3fd1; */
+  /* --git-prompt-branch: #c65339; */
+}
