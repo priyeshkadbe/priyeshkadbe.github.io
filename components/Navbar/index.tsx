@@ -1,33 +1,38 @@
 import Link from "next/link";
 import React from "react";
+import { useTheme } from "next-themes";
 import { routes } from "../../Constant/constants";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 type Props = {
-  currentPage:string;
+  currentPage: string;
 };
 
-function Navbar({currentPage}:Props){
-  return(
-    <nav className="flex justify-end bg-mainColor h-24 ">
-      <ul className="flex gap-x-5">
-        {routes.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className={`list-none text-gray-600 ${
-                currentPage === item.title
-                  ? "opacity-100"
-                  : "opacity-40 hover:opacity-100 transition-opacity"
-              }`}
-            >
-              <Link href={item.path}>{item.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  )
-}
+function Navbar({ currentPage }: Props) {
+  const renderThemeChanger = () => {
+    const { systemTheme, theme, setTheme } = useTheme();
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
+    if (currentTheme === "dark") {
+      return (
+        <SunIcon
+          className="w-7 h-7 "
+          role="button"
+          onClick={() => setTheme("light")}
+        />
+      );
+    } else {
+      return (
+        <MoonIcon
+          className="w-7 h-7 "
+          role="button"
+          onClick={() => setTheme("dark")}
+        />
+      );
+    }
+  };
+
+  return <nav className="flex h-24 ">{renderThemeChanger()}</nav>;
+}
 
 export default Navbar;
