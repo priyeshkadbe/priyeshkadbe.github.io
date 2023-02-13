@@ -1,6 +1,6 @@
 
 import Layout from "../components/Layout";
-import Contacts from "../components/Contact"
+import Contacts from "../components/Contact/Hero"
 function contact(){
   return(<div>
     <Layout currentPage="Contact">
