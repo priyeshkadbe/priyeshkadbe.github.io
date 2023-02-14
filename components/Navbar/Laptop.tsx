@@ -1,4 +1,5 @@
 import {routes} from "../../utils/constants";
+import renderThemeChanger from "../../utils/renderThemeChanger";
 import Link from "next/link";
 
 interface Props{
@@ -26,12 +27,16 @@ function Laptop({currentPage}:Props){
         </span>
       </Link>
     </li>
-    <ul className="flex items-center space-x-10">
+    
+    <ul className="flex items-center space-x-10 ">
+    <div className="w-5 h-5">
+    {renderThemeChanger()}
+    </div>
       {routes.map((item, index) => {
         return (
           <li
             key={index}
-            className={`list-none text-white ${
+            className={`list-none ${
               currentPage === item.title
                 ? "opacity-100"
                 : "opacity-40 hover:opacity-100 transition-opacity"
