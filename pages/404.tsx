@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { randomNumberText } from "../Constant/utils";
+import { randomNumberText } from "../utils/utils";
 import { useEffect } from "react";
 
 function Page404() {
