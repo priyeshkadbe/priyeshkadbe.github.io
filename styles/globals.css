@@ -12,5 +12,8 @@
     @apply text-blue-400 dark:text-pink-500;
   }
 
+  p{
+    @apply text-green-300 dark:text-blue-400;
+  }
   
 }
