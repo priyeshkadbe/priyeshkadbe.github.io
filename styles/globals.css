@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-[#f1f1f1] dark:bg-[#121212]; /* Use Tailwind color names instead of hex codes */
+    @apply bg-[#f1f1f1] dark:bg-[#121212]; 
     @apply text-red-600 dark:text-green-300;
   }
 
