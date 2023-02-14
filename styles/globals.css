@@ -16,4 +16,7 @@
     @apply text-green-300 dark:text-blue-400;
   }
   
+  footer{
+    @apply bg-[#f5f5f5] dark:bg-[#181717];
+  }
 }

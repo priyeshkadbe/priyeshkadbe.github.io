@@ -14,14 +14,14 @@ function Layout({ children, currentPage }: Props) {
   }`;
 
   return (
-    <div>
+    <>
       <Head>{pageTitle}</Head>
-      <>
+      <div >
         <Navbar currentPage={currentPage} />
-        <div>{children}</div>
+        {children}
         <Footer />
-      </>
-    </div>
+      </div>
+    </>
   );
 }
 

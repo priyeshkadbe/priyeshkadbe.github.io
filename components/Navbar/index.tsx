@@ -4,12 +4,13 @@ import { useTheme } from "next-themes";
 import { routes } from "../../utils/constants";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import renderThemeChanger from "../../utils/renderThemeChanger";
+import Laptop from "./Laptop";
 type Props = {
   currentPage: string;
 };
 
 function Navbar({ currentPage }: Props) {
-  return <nav className="flex h-24">{renderThemeChanger()}</nav>;
+  return (<Laptop currentPage={currentPage} />);
 }
 
 export default Navbar;
