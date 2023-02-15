@@ -7,7 +7,7 @@
   }
 
   h1 {
-    @apply text-blue-400 dark:text-pink-500;
+    @apply text-[#888] dark:text-[#858585];
   }
 
   p {
@@ -52,6 +52,10 @@
 
   .theme-changer-icon{
    @apply bg-red-300
+  }
+
+  .return-home{
+  @apply border-white;
   }
 }
 
