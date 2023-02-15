@@ -31,15 +31,15 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="absolute w-full h-screen">
-      <div className="globe js-globe">
+    <div className="absolute z-0 flex justify-center items-center">
+      <div className="globe js-globe" style={{ overflow: "hidden"}}>
         <div className="svg-wrapper"></div>
         <ul className="globe-list js-list"></ul>
         <canvas className="globe-canvas js-canvas"></canvas>
       </div>
     </div>
   );
-};
+}; 
 
 
 

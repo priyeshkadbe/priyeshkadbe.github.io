@@ -5,9 +5,9 @@ import Globe from "../components/Contact/Globe";
 function contact(){
   return(<div>
     <Layout currentPage="Contact">
-    <div >
+   
      <Globe />
-    </div>
+  
     </Layout>
   </div>)
 }
