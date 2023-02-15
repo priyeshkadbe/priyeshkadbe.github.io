@@ -39,6 +39,18 @@
   .active\:text-red-500:active {
     @apply text-red-500;
   }
+
+  .connect-wrapper{
+    @apply bg-gray-300 dark:bg-[#444444] ;
+    @apply p-4 md:p-8 gap-y-2 sm:gap-y-4;
+    transition: all 0.2s ease-in-out; 
+  }
+  .connect-wrapper:hover {
+    @apply bg-gray-300 dark:bg-gray-700; 
+  }
+
+
+
 }
 
 

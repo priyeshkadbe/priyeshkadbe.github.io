@@ -1,15 +1,14 @@
-
 import Layout from "../components/Layout";
-import Contacts from "../components/Contact/Hero"
+import Hero from "../components/Contact/Hero";
 import Globe from "../components/Contact/Globe";
-function contact(){
-  return(<div>
-    <Layout currentPage="Contact">
-   
-     <Contacts />
-  
-    </Layout>
-  </div>)
+function contact() {
+  return (
+    <div>
+      <Layout currentPage="Contact">
+        <Hero />
+      </Layout>
+    </div>
+  );
 }
 
-export default  contact;
+export default contact;

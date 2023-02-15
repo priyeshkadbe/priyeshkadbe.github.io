@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
 import {Routes} from "../types/interfaces"
-
-
+import { FaDocker, FaLinkedin, FaNpm,FaGithub ,} from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi"
 export const routes:Routes[]=[
   {
     title: "Home",
@@ -25,7 +26,7 @@ type FooterCol = {
   links: {
     name: string,
     link: string,
-    icon?: string,
+    icon?: ReactElement,
     leavesWebsite: boolean
   }[]
 }
@@ -73,28 +74,28 @@ export const footer: Footer = {
       links: [
         {
           name: "GitHub",
-          link: "https://github.com/braydentw",
-          icon: "/static/icons/github-f.svg",
+          link: "https://github.com/priyeshkadbe",
+          icon: <FaGithub size={25}/>,
           leavesWebsite: true,
         },
         {
           name: "LinkedIn",
-          link: "https://www.linkedin.com/in/braydentw/",
-          icon: "/static/icons/linkedin-f.svg",
+          link: "https://www.linkedin.com/in/0xpriyesh/",
+          icon: <FaLinkedin size={25}/>,
           leavesWebsite: true,
         },
         {
           name: "Email",
-          link: "mailto:contact@braydentw.io",
-          icon: "/static/icons/mail-f.svg",
+          link: "mailto:priyeshkadbe49@gmail.com",
+          icon: <HiOutlineMail size={25}/>,
           leavesWebsite: true,
         },
       ],
     },
   ],
   support: {
-    buymeacoffee: "braydenw",
-    paypal: "braydentw",
+    buymeacoffee: "priyeshkadbe",
+    paypal: "priyeshkadbe49@gmail.com",
     message: "I appreciate your support very much! 💙",
   },
 };
