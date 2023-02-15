@@ -5,7 +5,7 @@ import Link from "next/link";
 function ConnectLink() {
   return (
     <div
-      className="flex mt-20 items-center flex-col gap-y-10 md:gap-y-24"
+      className="flex mt-10 md:mt-20 items-center flex-col gap-y-10 md:gap-y-24"
       style={{ maxWidth: "1300px" }}
     >
       <span className="text-3xl md:text-5xl font-bold capitalize mx-auto text-center">
@@ -16,7 +16,7 @@ function ConnectLink() {
           href="/"
           className="flex flex-wrap justify-center flex-col connect-wrapper rounded-md"
         >
-          <TfiHeadphoneAlt    className="mx-auto h-16 w-16"/>
+          <TfiHeadphoneAlt className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Chat With Me</h2>
         </Link>
 
@@ -24,7 +24,7 @@ function ConnectLink() {
           href="/"
           className="flex flex-wrap justify-center  flex-col connect-wrapper rounded-md"
         >
-          <SiGooglemeet   className="mx-auto h-16 w-16"/>
+          <SiGooglemeet className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Book a Meeting</h2>
         </Link>
 
@@ -32,7 +32,7 @@ function ConnectLink() {
           href="/"
           className="flex flex-wrap justify-center  flex-col connect-wrapper rounded-md"
         >
-          <HiOutlineMail    className="mx-auto h-16 w-16"/>
+          <HiOutlineMail className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Send An Email</h2>
         </Link>
       </div>

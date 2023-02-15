@@ -11,7 +11,7 @@
   }
 
   p {
-    @apply text-green-300 dark:text-blue-400;
+    @apply text-[#888] dark:text-[#858585];
   }
 
   footer {
@@ -43,13 +43,12 @@
   .connect-wrapper{
     @apply bg-gray-300 dark:bg-[#444444] ;
     @apply p-4 md:p-8 gap-y-2 sm:gap-y-4;
+    @apply cursor-pointer;
     transition: all 0.2s ease-in-out; 
   }
   .connect-wrapper:hover {
     @apply bg-gray-300 dark:bg-gray-700; 
   }
-
-
 
 }
 
