@@ -1,7 +1,13 @@
+import Globe from "./Globe";
 function Hero() {
   return (
-    <div>
-      <h1>Hero</h1>
+    <div style={{position: "absolute",
+      width: "90vw",
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center"}}>
+     <Globe />
+     hero
     </div>
   );
 }

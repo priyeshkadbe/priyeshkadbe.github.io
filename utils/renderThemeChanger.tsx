@@ -7,7 +7,7 @@ const renderThemeChanger = () => {
   if (currentTheme === "dark") {
     return (
       <SunIcon
-        className="w-7 h-7 "
+        className="w-7 h-7"
         role="button"
         onClick={() => setTheme("light")}
       />

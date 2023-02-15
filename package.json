@@ -10,7 +10,8 @@
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "use-delayed-render": "^0.0.7"
   },
   "devDependencies": {
     "@types/node": "18.11.3",

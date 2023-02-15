@@ -1,5 +1,7 @@
 import Head from "next/head";
-import Navbar from "../Navbar";
+
+import Laptop from "../Navbar/Laptop";
+import Mobile from "../Navbar/Mobile";
 import Footer from "../Footer";
 type Props = {
   children: React.ReactNode;
@@ -14,13 +16,22 @@ function Layout({ children, currentPage }: Props) {
   }`;
 
   return (
-    <>
+    < >
       <Head>{pageTitle}</Head>
-      <div >
-        <Navbar currentPage={currentPage} />
+      <main >
+        <div className="hidden md:block z-100">
+          <Laptop currentPage={currentPage} />
+        </div>
+        {/* <div className="-m-5 block md:hidden z-100">
+          <Mobile />
+        </div> */}
+        <div className="min-h-screen">
         {children}
-        <Footer />
-      </div>
+        </div>
+       <div className="" style={{maxWidth: '100%'}}>
+       <Footer />
+       </div>
+      </main>
     </>
   );
 }
