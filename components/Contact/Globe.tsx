@@ -31,7 +31,7 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="absolute">
+    <div className="absolute w-auto h-screen">
       <div className="globe js-globe">
         <div className="svg-wrapper"></div>
 
