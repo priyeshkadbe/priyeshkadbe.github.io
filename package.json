@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.15",
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "18.2.0",

@@ -11,7 +11,7 @@ function Laptop({ currentPage }: Props) {
       <nav className="w-full mx-auto  hidden md:flex items-center justify-between p-6  py-8 " style={{ maxWidth: "1300px" }}>
         <li className="list-none font-bold text-lg cursor-pointer">
           <Link href="/">
-            <span className="font-black text-xl flex items-center">
+            <span className="font-black text-3xl  flex items-center">
               {/* <img
             className="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500"
             src="/static/logos/logo_no_text.svg"
@@ -21,7 +21,7 @@ function Laptop({ currentPage }: Props) {
                 return (
                   <span
                     key={index}
-                    className="hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim "
+                    className="hover:-mt-2 transition-all duration-500 hover:duration-100  "
                   >
                     {letter}
                   </span>
@@ -39,7 +39,7 @@ function Laptop({ currentPage }: Props) {
                 key={index}
                 className={`list-none `}
               >
-                <Link href={item.path}>{item.title}</Link>
+                <Link className="text-lg font-medium" href={item.path}>{item.title}</Link>
               </li>
             );
           })}

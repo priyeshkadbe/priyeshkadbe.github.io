@@ -2,6 +2,10 @@ import { ReactElement } from "react";
 import {Routes} from "../types/interfaces"
 import { FaDocker, FaLinkedin, FaNpm,FaGithub ,} from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi"
+
+export const CRIPS_WEBSITE_ID = "b1c39ecc-3e17-4d0d-8fba-c88b2e0a6ac4";
+export const CALENDLY_URL = "https://calendly.com/priyeshkadbe/30min";
+
 export const routes:Routes[]=[
   {
     title: "Home",
