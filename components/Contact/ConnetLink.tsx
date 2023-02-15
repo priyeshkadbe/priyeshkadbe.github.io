@@ -3,7 +3,8 @@ import Script from 'next/script';
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { SiGooglemeet } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
-import {CRIPS_WEBSITE_ID} from "../../utils/constants"
+import {CRIPS_WEBSITE_ID,EMAIL} from "../../utils/constants";
+
 import Link from "next/link";
 function ConnectLink() {
 
@@ -40,14 +41,14 @@ function ConnectLink() {
           <SiGooglemeet className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Book a Meeting</h2>
         </button>
-          
-        <button
-         
+
+        <Link
+          href={`mailto:${EMAIL}`}
           className="flex flex-wrap justify-center  flex-col connect-wrapper rounded-md"
         >
           <HiOutlineMail className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Send An Email</h2>
-        </button>
+        </Link>
       </div>
       
     </div>
