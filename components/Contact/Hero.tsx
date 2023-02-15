@@ -1,7 +1,7 @@
 import Globe from "./Globe";
 function Hero() {
   return (
-    <div className="absolute flex justify-center"  style={{ maxWidth: "1300px" }}>
+    <div className="absolute justify-center max-w-[1300px]"  >
      <Globe />
     </div>
   );

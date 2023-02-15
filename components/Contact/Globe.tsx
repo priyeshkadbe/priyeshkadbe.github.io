@@ -31,7 +31,7 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="absolute z-0 flex justify-center items-center">
+    <div className="absolute z-0 ">
       <div className="globe js-globe">
         <div className="svg-wrapper"></div>
         <ul className="globe-list js-list"></ul>
