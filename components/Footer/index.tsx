@@ -22,7 +22,7 @@ function Footer() {
                         >
                           {item.icon && (
                             <span className="pr-2 -mb-1">
-                              <Image src={item.icon} width={20} height={20} />
+                              {/* <Image src={item.icon} width={20} height={20} /> */}
                             </span>
                           )}
                           {item.name}
