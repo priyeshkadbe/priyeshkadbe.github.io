@@ -6,7 +6,7 @@ function contact(){
   return(<div>
     <Layout currentPage="Contact">
    
-     <Globe />
+     <Contacts />
   
     </Layout>
   </div>)
