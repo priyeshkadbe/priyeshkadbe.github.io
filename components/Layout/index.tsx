@@ -23,9 +23,9 @@ function Layout({ children, currentPage }: Props) {
         <div className="hidden md:block z-100">
           <Laptop currentPage={currentPage} />
         </div>
-        {/* <div className="-m-5 block md:hidden z-100">
+        <div className="block md:hidden z-100">
           <Mobile />
-        </div> */}
+        </div>
         <div className="min-h-screen">
         {children}
         </div>

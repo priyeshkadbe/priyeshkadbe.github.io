@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import {routes} from "../../utils/constants";
 import useDelayedRender from "use-delayed-render";
+import {RiMenu2Fill} from "react-icons/ri"
+import {RxCross1} from "react-icons/rx"
 
 export default function Mobile () {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,17 +33,22 @@ export default function Mobile () {
 
   return (
     <nav>
-      {/* <div
-        className={`w-full justify-between flex items-center  p-5`}
+      <div
+        className={`w-full  justify-between flex items-center  p-9`}
         style={{ zIndex: 101 }}
       >
-        <li className="list-none font-bold text-lg">
+        <li className="list-none font-bold text-3xl">
           <Link href="/">
-            <img
-              className="mr-3"
-              src="/static/logos/logo_full.svg"
-              width="160"
-            />
+          {"PriyeshK".split("").map((letter, index) => {
+                return (
+                  <span
+                    key={index}
+                    className="hover:-mt-2 transition-all duration-500 hover:duration-100  "
+                  >
+                    {letter}
+                  </span>
+                );
+              })}
           </Link>
         </li>
         <button
@@ -50,13 +57,17 @@ export default function Mobile () {
           type="button"
           onClick={toggleMenu}
         >
-          <MenuIcon data-hide={isMenuOpen} />
-          <CrossIcon data-hide={!isMenuOpen} />
+         
+         
+          {
+            !isMenuOpen?  <RiMenu2Fill data-hide={isMenuOpen} size={30}  />:
+            <RxCross1 data-hide={!isMenuOpen} size={30} />
+          }
         </button>
       </div>
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col  h-screen top-0 left-0
+          className={`menu flex flex-col px-3  h-screen top-0 left-0
             ${isMenuRendered && "menuRendered"}`}
         >
           {routes.map((item, index) => {
@@ -72,57 +83,7 @@ export default function Mobile () {
             );
           })}
         </ul>
-      )} */}
+      )} 
     </nav>
-  );
-}
-
-function MenuIcon(props:any) {
-  return (
-    <svg
-      className="h-5 w-5 absolute "
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      {...props}
-    >
-      <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-
-function CrossIcon(props:any) {
-  return (
-    <svg
-      className="h-5 w-5 absolute "
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
-      {...props}
-    >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
-    </svg>
   );
 }

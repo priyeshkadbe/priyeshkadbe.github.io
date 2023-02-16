@@ -1,10 +1,10 @@
 
 import Layout from "../components/Layout";
-import About from "../components/About/Hero";
+import AboutPage from "../components/AboutPage";
 function about(){
   return(
     <Layout currentPage="About">
-      <About />
+      <AboutPage />
     </Layout>
   )
 }
