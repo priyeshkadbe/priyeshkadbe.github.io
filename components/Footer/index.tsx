@@ -65,7 +65,7 @@ function Footer() {
                 </a>
               </div>
             )}
-            <p className=" text-xs pt-3">{footer.support.message}</p>
+            <p className=" text-xs pt-3 ">{footer.support.message}</p>
           </div>
         </div>
       </div>

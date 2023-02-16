@@ -101,6 +101,6 @@ export const footer: Footer = {
   support: {
     buymeacoffee: "priyeshkadbe",
     paypal: "priyeshkadbe49@gmail.com",
-    message: "I appreciate your support very much! 💙",
+    message: "I appreciate your support very much! 🤍",
   },
 };
