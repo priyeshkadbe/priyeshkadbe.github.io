@@ -10,7 +10,7 @@ function Footer() {
         {footer.columns.map((item, index) => {
           return (
             <div key={index} className="mb-5 sm:mb-0">
-              <h4 className="uppercase text-sm font-bold">{item.title}</h4>
+              <h4 className="uppercase text-lg font-bold tracking-widest">{item.title}</h4>
               <div>
                 {item.links.map((item, index) => {
                   return (
@@ -39,7 +39,7 @@ function Footer() {
           );
         })}
         <div className="text-center flex flex-col sm:text-left pt-8 sm:mt-0 sm:pt-0 border-t sm:border-0">
-          <h4 className="uppercase text-sm font-bold">Support My Work</h4>
+          <h4 className="uppercase text-lg font-bold tracking-widest">Support My Work</h4>
           <div className="space-y-2  w-full flex items-center sm:items-start flex-col">
             {footer.support.buymeacoffee !== "" && (
               <div className="hover:bg">

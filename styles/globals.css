@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply bg-[#f1f1f1] dark:bg-[#121212]; 
+    @apply bg-[#f1f1f1] dark:bg-[#121212];
   }
 
   h1 {
@@ -27,43 +27,42 @@
   }
 
   h4 {
-    @apply text-[#888] ;
+    @apply text-[#888];
   }
 
-  button{
+  button {
     @apply text-[#888];
   }
 }
 
 @layer utilities {
   a:hover {
-    @apply text-[#121212] dark:text-[#f1f1f1];
+    @apply text-[#444444] dark:text-[#c3c3c3];
+    transition: all 0.2s ease-in-out;
   }
 
-  .active\:text-red-500:active {
-    @apply text-red-500;
-  }
-
-  .connect-wrapper{
-    @apply bg-gray-300 dark:bg-[#444444] ;
+  .connect-wrapper {
+    @apply bg-gray-300 dark:bg-[#444444];
     @apply p-4 md:p-8 gap-y-2 sm:gap-y-4;
     @apply cursor-pointer;
-    transition: all 0.2s ease-in-out; 
+    transition: all 0.2s ease-in-out;
   }
   .connect-wrapper:hover {
-    @apply bg-gray-300 dark:bg-gray-700; 
+    @apply bg-gray-300 dark:bg-gray-700;
   }
 
-  .theme-changer-icon{
-   @apply bg-red-300
+  .theme-changer-icon {
+    @apply bg-red-300;
   }
-  .return-home{
-  @apply border-white;
+  .return-home {
+    @apply border-white;
   }
 
   button:hover {
     @apply text-[#121212] dark:text-[#f1f1f1];
   }
+
+  .mobile-navbar-bottom {
+    @apply border-[#888];
+  }
 }
-
-

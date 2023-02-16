@@ -26,7 +26,7 @@ function ConnectLink({ viewCalendly, setViewCalendly }: props) {
       className="flex mt-10 md:mt-20 items-center flex-col gap-y-10 md:gap-y-24"
       style={{ maxWidth: "1300px" }}
     >
-      <span className="text-3xl md:text-5xl px-4 flex-wrap font-bold capitalize mx-auto text-center">
+      <span className="text-3xl tracking-wider md:text-5xl px-4 flex-wrap font-bold capitalize mx-auto text-center">
         CONNECT FROM ANYWHERE
       </span>
 

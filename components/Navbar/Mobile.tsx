@@ -7,24 +7,14 @@ import { RiMenu2Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
 
 export default function Mobile() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(false);
   const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
-    isMenuOpen,
+    menuOpened,
     {
       enterDelay: 20,
       exitDelay: 300,
     }
   );
-
-  function toggleMenu() {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = "";
-    } else {
-      setIsMenuOpen(true);
-      document.body.style.overflow = "hidden";
-    }
-  }
 
   useEffect(() => {
     return function cleanup() {
@@ -53,21 +43,18 @@ export default function Mobile() {
           </Link>
         </li>
         <div className="flex justify-center items-center gap-x-4">
-        <button type="button" className="w-5 h-5">{renderThemeChanger()}</button>
-        <button
-          className=" md:hidden"
-          aria-label="Toggle menu"
-          type="button"
-          onClick={toggleMenu}
-        >
-          {!isMenuOpen ? (
-            <RiMenu2Fill data-hide={isMenuOpen} size={30} />
-          ) : (
-            <RxCross1 data-hide={!isMenuOpen} size={30} />
-          )}
-        </button>
+          <button type="button" className="w-5 h-5">
+            {renderThemeChanger()}
+          </button>
+          <button
+            className=" md:hidden"
+            aria-label="Toggle menu"
+            type="button"
+            onClick={() => setMenuOpened(menuOpened ? false : true)}
+          >
+            {menuOpened ? <RxCross1 size={24} /> : <RiMenu2Fill size={24} />}
+          </button>
         </div>
-        
       </div>
       {isMenuMounted && (
         <ul
@@ -77,7 +64,7 @@ export default function Mobile() {
           {routes.map((item, index) => {
             return (
               <li
-                className="border-b border-gray-50   font-semibold"
+                className="border-b mobile-navbar-bottom   "
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
                 <Link href={item.path} className="flex w-auto p-4">

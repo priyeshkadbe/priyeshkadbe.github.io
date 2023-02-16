@@ -10,7 +10,7 @@ function Hero() {
       >
         <p className="text-xl mb-5">Hey, I'm Priyesh.</p>
         <h1 className="inline-block  max-w-2xl lg:max-w-4xl  w-auto relative text-5xl md:text-6xl lg:text-7xl mb-10 font-bold ">
-          I enjoy <span className="">building</span> for the
+          I enjoy <span className="">developing</span> for the
           web.
         </h1>
         {/* <ScrollLink
