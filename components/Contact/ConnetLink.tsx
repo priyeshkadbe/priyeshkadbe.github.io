@@ -17,12 +17,11 @@ function ConnectLink() {
 
   return (
 
-
     <div
       className="flex mt-10 md:mt-20 items-center flex-col gap-y-10 md:gap-y-24"
       style={{ maxWidth: "1300px" }}
     >
-      <span className="text-3xl md:text-5xl font-bold capitalize mx-auto text-center">
+      <span className="text-3xl md:text-5xl px-4 flex-wrap font-bold capitalize mx-auto text-center">
         CONNECT FROM ANYWHERE
       </span>
       <div className="flex flex-col justify-between gap-x-10 gap-y-5 md:flex-row">
