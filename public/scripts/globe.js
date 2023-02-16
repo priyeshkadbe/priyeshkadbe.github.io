@@ -19,7 +19,7 @@ var groups = {
 var props = {
   mapSize: {
     // Size of the map from the intial source image (on which the dots are positioned on)
-    width: 2048 / 2,
+    width: 2000 / 2,
     height: 1024 / 2,
   },
   globeRadius: 200, // Radius of the globe (used for many calculations)

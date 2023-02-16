@@ -17,7 +17,7 @@ function Laptop({ currentPage }: Props) {
             src="/static/logos/logo_no_text.svg"
             width="60"
           /> */}
-              {"PriyeshK".split("").map((letter, index) => {
+              {"Pk.".split("").map((letter, index) => {
                 return (
                   <span
                     key={index}
@@ -31,8 +31,8 @@ function Laptop({ currentPage }: Props) {
           </Link>
         </li>
 
-        <ul className="flex items-center space-x-10 ">
-          <div className="w-5 h-5">{renderThemeChanger()}</div>
+        <ul className="flex items-center space-x-10 justify-center">
+          <button  className="">{renderThemeChanger()}</button>
           {routes.map((item, index) => {
             return (
               <li

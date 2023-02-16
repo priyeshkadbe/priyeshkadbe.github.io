@@ -40,7 +40,7 @@ export default function Mobile() {
       >
         <li className="list-none font-bold text-3xl">
           <Link href="/">
-            {"PriyeshK".split("").map((letter, index) => {
+            {"Pk.".split("").map((letter, index) => {
               return (
                 <span
                   key={index}

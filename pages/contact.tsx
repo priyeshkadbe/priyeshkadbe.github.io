@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
-import Hero from "../components/Contact/Hero";
-import Globe from "../components/Contact/Globe";
+import ContactPage from "../components/ContactPage"
+import Globe from "../components/ContactPage/Globe";
 function contact() {
   return (
     <div>
       <Layout currentPage="Contact">
-        <Hero />
+        <ContactPage />
       </Layout>
     </div>
   );

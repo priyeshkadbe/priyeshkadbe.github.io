@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-
 const Globe = () => {
   useEffect(() => {
     const script2 = document.createElement("script");
@@ -31,7 +30,7 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="absolute  ">
+    <div className="absolute  z-0 " >
       <div className="globe js-globe">
         <div className="svg-wrapper"></div>
         <ul className="globe-list js-list"></ul>
@@ -39,8 +38,6 @@ const Globe = () => {
       </div>
     </div>
   );
-}; 
-
-
+};
 
 export default Globe;
