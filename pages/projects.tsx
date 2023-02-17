@@ -1,10 +1,10 @@
 
 import Layout from "../components/Layout";
-import Hero from "../components/Projects/Hero";
+import ProjectPage from "../components/ProjectPage";
 function Projects(){
   return(
     <Layout currentPage="Contact">
-     <Hero />
+     < ProjectPage/>
   </Layout>
   )
 }

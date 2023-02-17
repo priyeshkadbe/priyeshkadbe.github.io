@@ -1,16 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+  font-family: aeonikPro;
+  src: local('Aeonik-Regular.ttf'), url("../fonts/6232160eeef427e45a261dff_AeonikMono-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: aeonikMono;
+  src: local('Aeonik-Mono.ttf'), url("../fonts/6232160eeef427e45a261dff_AeonikMono-Regular.ttf") format('truetype');
+}
+
+
 @layer base {
   body {
+    @apply font-[aeonikPro] ;
     @apply bg-[#f1f1f1] dark:bg-[#121212];
   }
 
   h1 {
+   
     @apply text-[#888] dark:text-[#858585];
   }
 
   p {
+    @apply font-[aeonikMono];
     @apply text-[#888] dark:text-[#858585];
   }
 
