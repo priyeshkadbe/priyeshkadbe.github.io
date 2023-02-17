@@ -16,6 +16,16 @@ export default function Mobile() {
     }
   );
 
+  function toggleMenu() {
+    if (menuOpened) {
+      setMenuOpened(false);
+      document.body.style.overflow = "";
+    } else {
+      setMenuOpened(true);
+      document.body.style.overflow = "hidden";
+    }
+  }
+
   useEffect(() => {
     return function cleanup() {
       document.body.style.overflow = "";
@@ -25,7 +35,7 @@ export default function Mobile() {
   return (
     <nav>
       <div
-        className={`w-full  justify-between flex items-center  p-6`}
+        className={`w-full  justify-between flex items-center  p-6 `}
         style={{ zIndex: 101 }}
       >
         <li className="list-none font-bold text-3xl">
@@ -46,20 +56,25 @@ export default function Mobile() {
           <button type="button" className="w-5 h-5">
             {renderThemeChanger()}
           </button>
+
           <button
-            className=" md:hidden"
+            className=" visible md:hidden "
             aria-label="Toggle menu"
             type="button"
-            onClick={() => setMenuOpened(menuOpened ? false : true)}
+            onClick={toggleMenu}
           >
-            {menuOpened ? <RxCross1 size={24} /> : <RiMenu2Fill size={24} />}
+            {menuOpened ? (
+              <RxCross1 size={24} data-hide={!menuOpened} />
+            ) : (
+              <RiMenu2Fill size={24} data-hide={setMenuOpened} />
+            )}
           </button>
         </div>
       </div>
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col  px-3  h-screen top-0 left-0
-            ${isMenuRendered && "menuRendered"}`}
+          className={`menu flex flex-col absolute bg-gray-900
+        ${isMenuRendered && "menuRendered"}`}
         >
           {routes.map((item, index) => {
             return (

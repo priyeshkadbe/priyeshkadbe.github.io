@@ -17,21 +17,19 @@ function Layout({ children, currentPage }: Props) {
   }`;
 
   return (
-    < >
+    <>
       <Head>{pageTitle}</Head>
-      <main >
+      <main p-5 w-full flex-1 text-center>
         <div className="hidden md:block z-100">
           <Laptop currentPage={currentPage} />
         </div>
-        <div className="block md:hidden z-100">
+        <div className=" block md:hidden z-100">
           <Mobile />
         </div>
         <div className="min-h-screen">
         {children}
         </div>
-       <div className="" style={{maxWidth: '100%'}}>
-       <Footer />
-       </div>
+
        <Script
         id="crisp-widget"
         strategy="afterInteractive"
@@ -49,6 +47,7 @@ function Layout({ children, currentPage }: Props) {
         }}
       />
       </main>
+      <Footer/>
     </>
   );
 }
