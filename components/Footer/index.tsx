@@ -6,7 +6,7 @@ import { buyMeCoffeeSVG } from "./icons/buyMeCoffeeSVG";
 function Footer() {
   return (
     <footer className="flex flex-col px-5 py-10 z-5 justify-center">
-      <div className="w-full max-w-screen flex mx-auto justify-around flex-wrap items-start">
+      <div className="w-full max-w-6xl flex mx-auto justify-between flex-wrap items-start">
         {footer.columns.map((item, index) => {
           return (
             <div key={index} className="mb-5 sm:mb-0">

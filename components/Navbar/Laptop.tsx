@@ -37,7 +37,7 @@ function Laptop({ currentPage }: Props) {
             return (
               <li
                 key={index}
-                className={`list-none `}
+                className={`list-none laptop-nav-element`}
               >
                 <Link className="text-lg font-medium" href={item.path}>{item.title}</Link>
               </li>

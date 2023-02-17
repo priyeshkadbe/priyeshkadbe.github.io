@@ -52,23 +52,7 @@ const projects: Project[] = [
     github: "https://github.com/priyeshkadbe/",
     tags: ["Rust", "CLI", "Game"],
   },
-  {
-    id: 6,
-    title: "DontLeaveMe 😭",
-    desc: "Beg for users to stay on your website.",
-    img: "/projects/dontleaveme.png",
-    link: "https://github.com/priyesh/kadbe/",
-    tags: ["Javascript", "NPM"],
-  },
-  {
-    id: 7,
-    title: "Madlibs",
-    desc: "A simple version of Madlibs built for the web!",
-    img: "/projects/madlibs.png",
-    link: "https://fillemin.netlify.app/",
-    github: "https://github.com/priyeshkadbe/",
-    tags: ["HTML", "CSS", "Javascript"],
-  },
+  
 ];
 
 export const allTags: string[] = [];

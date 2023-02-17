@@ -2,30 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face{
+@font-face {
   font-family: aeonikPro;
-  src: local('Aeonik-Regular.ttf'), url("../fonts/6232160eeef427e45a261dff_AeonikMono-Regular.ttf") format('truetype');
+  src: local("Aeonik-Regular.ttf"),
+    url("../fonts/620e5796f94823392179d875_AeonikPro-Regular.ttf")
+      format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: aeonikMono;
-  src: local('Aeonik-Mono.ttf'), url("../fonts/6232160eeef427e45a261dff_AeonikMono-Regular.ttf") format('truetype');
+  src: local("Aeonik-Mono.ttf"),
+    url("../fonts/6232160eeef427e45a261dff_AeonikMono-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
 }
+
+
+@font-face {
+  font-family: aeonikLight;
+  src: local("Aeonik-Mono.ttf"),
+    url("../fonts/Aeonik-Light.ttf")
+      format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: aeonikMedium;
+  src: local("Aeonik-Medium.ttf"),
+    url("../fonts/Aeonik-Medium.ttf")
+      format("truetype");
+  font-weight: 400;
+}
+
 
 
 @layer base {
   body {
-    @apply font-[aeonikPro] ;
-    @apply bg-[#f1f1f1] dark:bg-[#121212];
+    @apply font-[aeonikPro];
+    @apply bg-[#f1f1f1] dark:bg-[#0C0D0C];
   }
 
   h1 {
-   
-    @apply text-[#888] dark:text-[#858585];
+    @apply font-[aeonikMono];
+    @apply text-[#838383] dark:text-[#858585];
   }
 
   p {
-    @apply font-[aeonikMono];
+    @apply font-[aeonikLight];
     @apply text-[#888] dark:text-[#858585];
   }
 
@@ -34,6 +57,7 @@
   }
 
   a {
+    
     @apply text-[#888];
   }
 
@@ -77,7 +101,34 @@
     @apply text-[#121212] dark:text-[#f1f1f1];
   }
 
+  .laptop-nav-element:hover {
+    @apply underline;
+    @apply transition;
+  }
+
   .mobile-navbar-bottom {
     @apply border-[#888];
   }
+
+  .project-card-wrapper {
+    @apply bg-[#E6E2DE] dark:bg-[#242629];
+  }
+
+  .project-card-wrapper:hover {
+    @apply cursor-pointer;
+    @apply border;
+    @apply border-[#45403d] dark:border-[#c2ebc4];
+  }
+
+  .project-tags {
+    @apply border;
+    @apply border-[#888] dark:border-[#45403d];
+  }
+
+  .project-tags-group-hover{
+    @apply border-[0.2px];
+    @apply border-dotted;
+    @apply border-[#45403d] dark:border-[#c2ebc4];
+  }
+
 }

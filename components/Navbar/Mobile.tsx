@@ -58,7 +58,7 @@ export default function Mobile() {
       </div>
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col px-3  h-screen top-0 left-0
+          className={`menu flex flex-col  px-3  h-screen top-0 left-0
             ${isMenuRendered && "menuRendered"}`}
         >
           {routes.map((item, index) => {
