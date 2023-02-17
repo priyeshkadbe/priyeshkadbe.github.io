@@ -82,7 +82,7 @@ export default function Mobile() {
                 className="border-b mobile-navbar-bottom   "
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
-                <Link href={item.path} className="flex w-auto p-4">
+                <Link href={item.path} className="flex w-auto p-4 font-[aeonikMono]">
                   {item.title}
                 </Link>
               </li>
