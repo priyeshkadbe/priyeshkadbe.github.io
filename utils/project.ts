@@ -7,8 +7,8 @@ const projects: Project[] = [
     title: "Learn.TheYEI",
     desc: "All the resources you will need to get a boost into economics.",
     img: "/projects/yei-learn.png",
-    link: "https://learn.theyei.org/",
-    github: "https://github.com/braydentw/learn.theyei",
+    link: "#",
+    github: "https://github.com/priyeshkadbe/",
     tags: ["React", "NextJS", "TailwindCSS", "CSS", "Firebase"],
   },
   {
@@ -16,7 +16,7 @@ const projects: Project[] = [
     title: "BuildFaster",
     desc: "Beautiful HTML templates ready-made for your next landing page.",
     img: "/projects/buildfaster.png",
-    link: "https://buildfaster.co/",
+    link: "#",
     tags: ["HTML", "CSS", "Javascript", "Gumroad"],
   },
   {
@@ -24,8 +24,8 @@ const projects: Project[] = [
     title: "React Emoji Search",
     desc: "1800+ emojis at your fingertips. Ready-to-use with just a simple copy+paste.",
     img: "/projects/react-emoji-search.png",
-    link: "https://react-emoji-search.braydentw.vercel.app/",
-    github: "https://github.com/braydentw/react-emoji-search",
+    link: "#",
+    github: "https://github.com/priyeshkadbe/",
     tags: ["React", "CSS", "JSON"],
   },
   {
@@ -33,7 +33,7 @@ const projects: Project[] = [
     title: "BitcoinTemp",
     desc: "A fun way to check the price of bitcoin! Cloudy days, sunny days, and Bitcoin Storms!",
     img: "/projects/bitcointemp.png",
-    link: "https://bitcointemp.com",
+    link: "#",
     tags: ["React", "NextJS", "SCSS", "API"],
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "Create HTML Boilerplate",
     desc: "Generate a vanilla HTML boilerplate in a flash!",
     img: "/projects/create-html-boilerplate.png",
-    github: "https://github.com/BraydenTW/create-html-boilerplate",
+    github: "https://github.com/priyeshkadbe/",
     tags: ["Node", "Javascript", "NPM", "HTML"],
   },
   {
@@ -49,7 +49,7 @@ const projects: Project[] = [
     title: "8 Ball in your CLI",
     desc: "An 8 ball simulation in your CLI built with Rust!",
     img: "/projects/8ball-rust.png",
-    github: "https://github.com/BraydenTW/8ball-rust",
+    github: "https://github.com/priyeshkadbe/",
     tags: ["Rust", "CLI", "Game"],
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "DontLeaveMe 😭",
     desc: "Beg for users to stay on your website.",
     img: "/projects/dontleaveme.png",
-    link: "https://github.com/BraydenTW/dontleaveme/",
+    link: "https://github.com/priyesh/kadbe/",
     tags: ["Javascript", "NPM"],
   },
   {
@@ -66,7 +66,7 @@ const projects: Project[] = [
     desc: "A simple version of Madlibs built for the web!",
     img: "/projects/madlibs.png",
     link: "https://fillemin.netlify.app/",
-    github: "https://github.com/braydentw/madlibs",
+    github: "https://github.com/priyeshkadbe/",
     tags: ["HTML", "CSS", "Javascript"],
   },
 ];
