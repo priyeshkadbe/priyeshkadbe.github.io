@@ -37,9 +37,12 @@ function Laptop({ currentPage }: Props) {
             return (
               <li
                 key={index}
-                className={`list-none laptop-nav-element`}
+                className={`list-none  `}
               >
-                <Link className="text-lg font-medium" href={item.path}>{item.title}</Link>
+                <Link className={`text-lg font-medium font-[aeonikPro] ${
+                  currentPage === item.title
+                    && "border-b"
+                }` } href={item.path}>{item.title}</Link>
               </li>
             );
           })}
