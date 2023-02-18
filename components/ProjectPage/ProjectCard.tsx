@@ -1,25 +1,32 @@
 import { kebabCase } from "../../utils/utils";
 import Link from "next/link";
 import { Project } from "../../types/interfaces";
+import Image from "next/image";
 
 interface props {
-  key: number;
   project: Project;
 }
 
+const borderColors = ["#ff4800", "#c2ebc4", "#5546ff", "#FF9ECE"]; // Define an array of colors
+
+
 function ProjectCard({ project }: props) {
+
+  const borderColor = borderColors[project.id % borderColors.length]; // Access the color based on the project.id
+
+
   return (
     <div
-    id="projectCard"
-      className="group max-w-sm mx-auto flex flex-col  md:justify-center  p-2 my-4 md:my-0   md:p-4 rounded-sm project-card-wrapper"
-      key={project.id}
+    className={`group max-w-sm mx-auto flex flex-col  md:justify-center  p-2 my-4 md:my-0   md:p-4 rounded-sm project-card-wrapper `}
+    key={project.id}
+    style={{ borderColor }}
     >
       <a
         href={project.link || project.github}
         target="_blank"
-        className={`w-full relative rounded-xl p-2 opacity-50   group-hover:opacity-95 `}
+        className={`w-full  rounded-xl  opacity-50   group-hover:opacity-95 `}
       >
-        <img className="w-full  rounded-sm grayscale group-hover:rounded-xl" src={project.img} />
+        <img className="w-full  rounded-sm grayscale group-hover:rounded-3xl group-hover:grayscale-0" src={project.img} />
       </a>
       <div className="w-full mt-5">
         <div className="flex  justify-between items-center gap-x-4">
@@ -59,7 +66,7 @@ function ProjectCard({ project }: props) {
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div  className="m-1 group-hover:project-tags-group-hover project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 ">
+                  <div  className="m-1 group-hover:project-tags-group-hover  project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 " style={{borderColor}}>
                     {tag}
                   </div>
                 </Link>

@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,25 +17,19 @@
   font-weight: 400;
 }
 
-
 @font-face {
   font-family: aeonikLight;
   src: local("Aeonik-Mono.ttf"),
-    url("../fonts/Aeonik-Light.ttf")
-      format("truetype");
+    url("../fonts/Aeonik-Light.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: aeonikMedium;
   src: local("Aeonik-Medium.ttf"),
-    url("../fonts/Aeonik-Medium.ttf")
-      format("truetype");
+    url("../fonts/Aeonik-Medium.ttf") format("truetype");
   font-weight: 400;
 }
-
-
-
 
 @layer base {
   body {
@@ -59,7 +52,6 @@
   }
 
   a {
-    
     @apply text-[#888];
   }
 
@@ -80,7 +72,6 @@
   a:hover {
     @apply text-[#444444] dark:text-[#c3c3c3];
     transition: all 0.2s ease-in-out;
-    @apply border-b ;
   }
 
   .connect-wrapper {
@@ -118,22 +109,29 @@
   }
 
   .project-card-wrapper:hover {
+    @apply bg-[#f1f1f1] dark:bg-[#0C0D0C];
     @apply cursor-pointer;
     @apply border;
     @apply border-[#45403d] dark:border-[#c2ebc4];
+    transition: background-color 0.2s ease-in-out;
   }
+
+
+  .group:hover .project-card-wrapper{
+  
+  }
+
 
   .project-tags {
     @apply border;
     @apply border-[#888] dark:border-[#45403d];
   }
 
-  .project-tags-group-hover{
+  .project-tags-group-hover {
     @apply border-[0.2px];
     @apply border-dotted;
     @apply border-[#45403d] dark:border-[#c2ebc4];
   }
-
 
   .menu {
     margin: 0;
@@ -145,16 +143,15 @@
     left: 0;
     transition: opacity 300ms ease, transform 300ms ease;
   }
-  
+
   .menu li {
     transform: translateX(-16px);
     opacity: 0;
     transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
-    border-color 300ms ease;
+      border-color 300ms ease;
     width: 0px;
     white-space: nowrap;
   }
-  
 
   .menuRendered {
     opacity: 1;
@@ -166,11 +163,8 @@
     transform: translateX(0);
     opacity: 1;
   }
-  
+
   .menu > * + * {
     margin-top: 24px;
   }
-
-
-
 }

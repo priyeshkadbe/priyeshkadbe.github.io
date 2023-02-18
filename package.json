@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
