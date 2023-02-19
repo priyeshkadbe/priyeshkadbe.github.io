@@ -1,12 +1,13 @@
 
 import Layout from "../components/Layout";
 import ProjectPage from "../components/ProjectPage";
-function Projects(){
+function projects(){
   return(
-    <Layout currentPage="Contact">
+    <Layout currentPage="Projects">
      < ProjectPage/>
   </Layout>
   )
 }
 
-export default Projects
+
+export default projects

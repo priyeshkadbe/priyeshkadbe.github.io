@@ -31,10 +31,18 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: nectoMono;
+  src: local("Aeonik-Medium.ttf"),
+    url("../fonts/Necto-Mono.woff2") format("truetype");
+  font-weight: 400;
+}
+
+
 @layer base {
   body {
     @apply font-[aeonikPro];
-    @apply bg-[#f1f1f1] dark:bg-[#0C0D0C];
+    @apply bg-[#F9F8F9] dark:bg-[#111111];
   }
 
   h1 {
@@ -108,11 +116,12 @@
     @apply bg-[#E6E2DE] dark:bg-[#242629];
   }
 
+  /* #494848  #27282B #101011*/
   .project-card-wrapper:hover {
-    @apply bg-[#f1f1f1] dark:bg-[#0C0D0C];
+    @apply bg-[#f4f4f4] dark:bg-[#101011] ;
     @apply cursor-pointer;
-    @apply border;
-    @apply border-[#45403d] dark:border-[#c2ebc4];
+    @apply border-[0.5px];
+    @apply border-dashed;
     transition: background-color 0.2s ease-in-out;
   }
 
@@ -130,7 +139,6 @@
   .project-tags-group-hover {
     @apply border-[0.2px];
     @apply border-dotted;
-    @apply border-[#45403d] dark:border-[#c2ebc4];
   }
 
   .menu {
