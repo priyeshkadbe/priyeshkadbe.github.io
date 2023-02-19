@@ -19,7 +19,6 @@ function ProjectCard({ project }: props) {
     <div
     className={`group max-w-sm mx-auto flex flex-col  md:justify-center  p-2 my-4 md:my-0   md:p-4 rounded-sm project-card-wrapper `}
     key={project.id}
-    style={{ borderColor }}
     >
       <a
         href={project.link || project.github}
@@ -66,7 +65,7 @@ function ProjectCard({ project }: props) {
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div  className="m-1 group-hover:project-tags-group-hover  project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 " style={{borderColor}}>
+                  <div  className="m-1 group-hover:project-tags-group-hover  project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 " >
                     {tag}
                   </div>
                 </Link>

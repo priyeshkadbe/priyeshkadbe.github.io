@@ -38,7 +38,6 @@
   font-weight: 400;
 }
 
-
 @layer base {
   body {
     @apply font-[aeonikPro];
@@ -118,18 +117,16 @@
 
   /* #494848  #27282B #101011*/
   .project-card-wrapper:hover {
-    @apply bg-[#f4f4f4] dark:bg-[#101011] ;
+    @apply bg-[#f4f4f4] dark:bg-[#101011];
     @apply cursor-pointer;
     @apply border-[0.5px];
     @apply border-dashed;
+    @apply border-[#1010111] dark:border-[#f8f8f8];
     transition: background-color 0.2s ease-in-out;
   }
 
-
-  .group:hover .project-card-wrapper{
-  
+  .group:hover .project-card-wrapper {
   }
-
 
   .project-tags {
     @apply border;
@@ -137,8 +134,9 @@
   }
 
   .project-tags-group-hover {
-    @apply border-[0.2px];
+    @apply border-[0.1px];
     @apply border-dotted;
+    @apply border-[#1010111] dark:border-[#f8f8f8];
   }
 
   .menu {
