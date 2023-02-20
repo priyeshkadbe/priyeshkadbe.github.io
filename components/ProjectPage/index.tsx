@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import More from "./More";
 function ProjectPage() {
   return (
-    <div className="flex justify-center flex-col">
+    <div className="">
       <Header />
       <Projects />
       <More />

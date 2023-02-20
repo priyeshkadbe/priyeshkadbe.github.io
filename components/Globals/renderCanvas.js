@@ -136,17 +136,10 @@ function Node() {
   this.x = 0
   this.y = 0
   this.vy = 0
-
-  
   this.vx = 0
 }
 
 export const renderCanvas = function () {
-  var canvas = document.getElementById('canvas');
-  if (!canvas) {
-    console.error('Canvas element not found');
-    return;
-  }
   ctx = document.getElementById('canvas').getContext('2d')
   ctx.running = true
   ctx.frame = 1

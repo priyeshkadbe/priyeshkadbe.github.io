@@ -5,7 +5,7 @@ import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import FadeDown from '../Animations/FadeDown'
 import FadeRight from '../Animations/FadeRight'
 import FadeUp from '../Animations/FadeUp'
-//import { renderCanvas } from "../Globals/renderCanvas"
+import { renderCanvas } from "../Globals/renderCanvas"
 import { ScrollContext } from '../Globals/ScrollObserver'
 
 export default function Hero(): ReactElement {
@@ -19,9 +19,9 @@ export default function Hero(): ReactElement {
     progress = Math.min(1, scrollY / elContainer.clientHeight)
   }
 
-  // useEffect(() => {
-  //   renderCanvas()
-  // }, [])
+  useEffect(() => {
+    renderCanvas()
+  }, [])
 
   return (
     <div>
@@ -30,9 +30,9 @@ export default function Hero(): ReactElement {
       </h1>
       <motion.div
         className="relative z-10 flex h-[calc(100vh-81px)] items-center md:h-[calc(100vh-116px)]"
-        // animate={{
-        //   transform: `translateY(${progress * 20}vh)`,
-        // }}
+        animate={{
+          transform: `translateY(${progress * 20}vh)`,
+        }}
         transition={{ type: 'spring', stiffness: 50 }}
       >
         <AnimatePresence>
@@ -77,7 +77,7 @@ export default function Hero(): ReactElement {
           </div>
         </AnimatePresence>
       </motion.div>
-      {/* <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas> */}
+      <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas>
     </div>
   )
 }
