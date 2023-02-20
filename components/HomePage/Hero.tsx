@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 function Hero() {
   return (
@@ -13,7 +13,7 @@ function Hero() {
           I enjoy <span className="">developing</span> for the
           web.
         </h1>
-        {/* <ScrollLink
+        <ScrollLink
           activeClass="active"
           to="learnmore"
           spy={true}
@@ -21,10 +21,10 @@ function Hero() {
           smooth={true}
           duration={500}
         >
-          <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink  hover:border-fun-pink transition-colors">
+          <div className="cursor-pointer font-bold whitespace-nowrap px-10 py-4 md:my-20 text-fun-white border-2 text-xl rounded-full border-fun-white bg-bg hover:bg-fun-pink  hover:border-fun-pink transition-colors">
             Tell me more
           </div>
-        </ScrollLink> */}
+        </ScrollLink>
       </div>
     </>
   );
