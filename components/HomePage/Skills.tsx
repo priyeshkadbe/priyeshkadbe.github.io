@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { skills } from "../../utils/Skills";
 import { getTechnos } from "../../utils/technos";
 
 function Skills() {
@@ -11,29 +10,33 @@ function Skills() {
   useEffect(() => {
     const container = containerRef.current;
     const content = contentRef.current;
+    let i = 0;
+    let reverse = false;
+    let direction = 1;
 
-    // const startScroll = () => {
-    //   intervalRef.current = setInterval(() => {
-    //     if (container?.scrollLeft === content?.offsetWidth - container?.offsetWidth) {
-    //       clearInterval(intervalRef.current!);
-    //       intervalRef.current = setInterval(() => {
-    //         if (container?.scrollLeft === 0) {
-    //           clearInterval(intervalRef.current!);
-    //           startScroll();
-    //         }
-    //         container.scrollLeft -= 1;
-    //       }, 10);
-    //     }
-    //     container.scrollLeft += 1;
-    //   }, 10);
-    // };
+    const startScroll = () => {
+      intervalRef.current = setInterval(() => {
+        if (content?.offsetWidth && container?.offsetWidth) {
+          if (i === content.offsetWidth +70) {
+            direction = -1;
+            reverse = true;
+          } else if (i === 0) {
+            direction = 1;
+            reverse = false;
+          }
+          container.scrollLeft += direction;
+          i += direction;
+        }
+      }, 0);
+    };
 
-    // startScroll();
+    startScroll();
 
     return () => {
       clearInterval(intervalRef.current!);
     };
   }, []);
+
 
   return (
     <div className="mx-auto max-w-6xl flex flex-col md:flex-col justify-center mt-20 ">
@@ -41,13 +44,12 @@ function Skills() {
         MY FAVORITE EDGE TECHNOLOGIES
       </span>
       <div className="flex my-10">
-        <div
-          className="flex overflow-hidden"
-          ref={containerRef}
-        >
+        <div className="flex overflow-hidden" ref={containerRef}>
           <div className="skills-content" ref={contentRef}>
             {technos.map((techno, i) => (
-              <span className="h-40 w-40" key={i}>{techno}</span>
+              <span className="h-40 w-40" key={i}>
+                {techno}
+              </span>
             ))}
           </div>
         </div>

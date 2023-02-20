@@ -19,7 +19,7 @@ function Layout({ children, currentPage }: Props) {
   return (
     <>
       <Head>{pageTitle}</Head>
-      <main p-5 w-full flex-1 text-center>
+      <main >
         <div className="hidden md:block z-100">
           <Laptop currentPage={currentPage} />
         </div>

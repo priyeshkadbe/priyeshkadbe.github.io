@@ -5,12 +5,12 @@ import Skills from "./Skills";
 
 function HomePage(){
   return(
-    <>
+    <div>
     <Hero />
     <Projects />
     <Skills/>
     {/* <CTA/> */}
-    </>
+    </div>
   )
 }
 export default HomePage;

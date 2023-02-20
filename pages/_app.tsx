@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
-
-
+import { ScrollObserver } from "../components/Globals/ScrollObserver";
+import { AnimatePresence } from "framer-motion";
+import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (window) {
@@ -16,7 +17,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <Component {...pageProps} />
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      <AnimatePresence exitBeforeEnter initial={false}>
+        <ScrollObserver>
+          <Component {...pageProps} />
+        </ScrollObserver>
+      </AnimatePresence>
     </ThemeProvider>
   );
 }
