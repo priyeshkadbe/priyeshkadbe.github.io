@@ -12,23 +12,23 @@ function Skills() {
     const container = containerRef.current;
     const content = contentRef.current;
 
-    const startScroll = () => {
-      intervalRef.current = setInterval(() => {
-        if (container?.scrollLeft === content?.offsetWidth - container?.offsetWidth) {
-          clearInterval(intervalRef.current!);
-          intervalRef.current = setInterval(() => {
-            if (container?.scrollLeft === 0) {
-              clearInterval(intervalRef.current!);
-              startScroll();
-            }
-            container.scrollLeft -= 1;
-          }, 10);
-        }
-        container.scrollLeft += 1;
-      }, 10);
-    };
+    // const startScroll = () => {
+    //   intervalRef.current = setInterval(() => {
+    //     if (container?.scrollLeft === content?.offsetWidth - container?.offsetWidth) {
+    //       clearInterval(intervalRef.current!);
+    //       intervalRef.current = setInterval(() => {
+    //         if (container?.scrollLeft === 0) {
+    //           clearInterval(intervalRef.current!);
+    //           startScroll();
+    //         }
+    //         container.scrollLeft -= 1;
+    //       }, 10);
+    //     }
+    //     container.scrollLeft += 1;
+    //   }, 10);
+    // };
 
-    startScroll();
+    // startScroll();
 
     return () => {
       clearInterval(intervalRef.current!);
