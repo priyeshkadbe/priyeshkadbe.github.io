@@ -55,6 +55,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+
 @layer base {
   body {
     @apply font-[aeonikPro];
@@ -90,6 +92,11 @@ input:-webkit-autofill:focus {
   button {
     @apply text-[#888];
   }
+
+  
+}
+@layer components {
+  
 }
 
 @layer utilities {
@@ -196,8 +203,50 @@ input:-webkit-autofill:focus {
   display: flex;
   gap: 4px;
 }
+.underline-magical {
+  background-image: linear-gradient(to right, #6B7280, #6B7280);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.2em;
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 300ms;
+}
 
-  
+.underline-magical:focus {
+  background-size: 100% 100%;
+}
+
+.underline-magical:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-size: 100% 100%;
+}
+
+.dark .underline-magical {
+  background-image: linear-gradient(to right, #6B7280, #6B7280);
+}
+
+.horizontal-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#de1d8d, #de1d8d);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+
+.horizontal-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+.horizontal-underline-active {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
+
+
 }
 
 

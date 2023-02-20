@@ -40,8 +40,8 @@ function Laptop({ currentPage }: Props) {
           return (
             <li key={index} className={`list-none`}>
               <Link
-                className={`text-lg font-medium font-[aeonikPro] ${
-                  currentPage === item.title && "border-b pb-1"
+                className={`text-lg horizontal-underline font-medium font-[aeonikPro] ${
+                  currentPage === item.title && "  pb-1 horizontal-underline-active"
                 }`}
                 href={item.path}
               >
