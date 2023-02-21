@@ -39,13 +39,13 @@ function Skills() {
 
 
   return (
-    <div className="mx-auto max-w-6xl flex flex-col md:flex-col justify-center mt-20 ">
+    <div className="mx-auto max-w-sm md:max-w-6xl flex flex-col md:flex-col justify-center mt-20 ">
       <span className=" font-bold text-4xl mx-auto text-center my-6 tracking-widest">
         MY FAVORITE EDGE TECHNOLOGIES
       </span>
       <div className="flex my-10 mx-4">
         <div className="flex overflow-hidden" ref={containerRef}>
-          <div className="skills-content" ref={contentRef}>
+          <div className="skills-content " ref={contentRef}>
             {technos.map((techno, i) => (
               <span className="h-20 w-20 md:h-40 md:w-40" key={i}>
                 {techno}
