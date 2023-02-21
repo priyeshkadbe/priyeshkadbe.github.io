@@ -17,7 +17,7 @@ function Skills() {
     const startScroll = () => {
       intervalRef.current = setInterval(() => {
         if (content?.offsetWidth && container?.offsetWidth) {
-          if (i === content.offsetWidth +70) {
+          if (i === content.offsetWidth +10) {
             direction = -1;
             reverse = true;
           } else if (i === 0) {
@@ -27,7 +27,7 @@ function Skills() {
           container.scrollLeft += direction;
           i += direction;
         }
-      }, 0);
+      }, 90);
     };
 
     startScroll();
@@ -43,11 +43,11 @@ function Skills() {
       <span className=" font-bold text-4xl mx-auto text-center my-6 tracking-widest">
         MY FAVORITE EDGE TECHNOLOGIES
       </span>
-      <div className="flex my-10">
+      <div className="flex my-10 mx-4">
         <div className="flex overflow-hidden" ref={containerRef}>
           <div className="skills-content" ref={contentRef}>
             {technos.map((techno, i) => (
-              <span className="h-40 w-40" key={i}>
+              <span className="h-20 w-20 md:h-40 md:w-40" key={i}>
                 {techno}
               </span>
             ))}

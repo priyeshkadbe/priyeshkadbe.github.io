@@ -5,7 +5,7 @@ import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import FadeDown from '../Animations/FadeDown'
 import FadeRight from '../Animations/FadeRight'
 import FadeUp from '../Animations/FadeUp'
-import { renderCanvas } from "../Globals/renderCanvas"
+//import { renderCanvas } from "../Globals/renderCanvas"
 import { ScrollContext } from '../Globals/ScrollObserver'
 
 export default function Hero(): ReactElement {
@@ -19,9 +19,9 @@ export default function Hero(): ReactElement {
     progress = Math.min(1, scrollY / elContainer.clientHeight)
   }
 
-  useEffect(() => {
-    renderCanvas()
-  }, [])
+  // useEffect(() => {
+  //   renderCanvas()
+  // }, [])
 
   return (
     <div>
