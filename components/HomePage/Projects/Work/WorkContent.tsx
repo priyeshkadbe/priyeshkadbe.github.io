@@ -2,22 +2,24 @@ import Image from 'next/image'
 import { WorkContainer } from './WorkContainer'
 import { WorkLeft } from './WorkLeft'
 import { WorkRight } from './WorkRight'
-import { WorkTile } from './workTiles'
+
+import ProjectCard from "../../../ProjectPage/ProjectCard";
+
+import { Project } from "../../../../types/interfaces";
 
 interface WorkContentProps {
-  work: WorkTile
-  progress?: number
+
+  project: Project;
+  progress?: number;
 }
 
-export default function WorkContent({ work, progress = 0 }: WorkContentProps) {
-  const { title, description, image } = work
+export default function WorkContent({ project, progress = 0 }: WorkContentProps) {
   return (
     <WorkContainer>
       <WorkLeft/>
-       
       <WorkRight progress={progress}>
         <div className="drop-shadow-2xl sm:mt-10 md:mt-24">
-          <Image src={image.src} alt={title} width={image.width} height={image.height} />
+          <ProjectCard project={project} />
         </div>
       </WorkRight>
     </WorkContainer>

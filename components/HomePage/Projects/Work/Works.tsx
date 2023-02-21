@@ -1,29 +1,23 @@
-import { Tile } from '../Tiles/Tile'
-import TileBackground from '../Tiles/TileBackground'
-import { TileContent } from '../Tiles/TileContent'
-import TileWrapper from '../Tiles/TileWrapper'
-import { WorkBackground } from './WorkBackground'
-import WorkContent from './WorkContent'
-import { workTiles } from './workTiles'
-import ProjectCard from "../../../ProjectPage/ProjectCard";
-import projects from "../../../../utils/project"
+import { Tile } from "../Tiles/Tile";
+import TileBackground from "../Tiles/TileBackground";
+import { TileContent } from "../Tiles/TileContent";
+import TileWrapper from "../Tiles/TileWrapper";
+
+import WorkContent from "./WorkContent";
+//import { workTiles } from "./workTiles";
+
+import projects from "../../../../utils/project";
 
 export default function Works() {
   return (
-    <TileWrapper numOfPages={workTiles.length}>
-      <TileBackground>
-        <WorkBackground />
-      </TileBackground>
+    <TileWrapper numOfPages={projects.length}>
       <TileContent>
-        {workTiles.map((work, i) => (
-          <Tile page={i} key={work.title}>
-            <WorkContent work={work} />
+        {projects.map((item, i) => (
+          <Tile page={i} key={item.title}>
+            <WorkContent project={item} />
           </Tile>
         ))}
-        {/* {projects.slice(0, 3).map((item) => {
-            return <ProjectCard key={item.id} project={item} />;
-          })} */}
       </TileContent>
     </TileWrapper>
-  )
+  );
 }

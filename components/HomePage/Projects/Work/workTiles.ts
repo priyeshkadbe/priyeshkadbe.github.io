@@ -1,7 +1,7 @@
 export type WorkTile = {
   title: string
-  description: string
-  image: {
+  description?: string
+  image?: {
     src: string
     width: number
     height: number
