@@ -18,7 +18,7 @@ export default function WorkContent({ project, progress = 0 }: WorkContentProps)
     <WorkContainer>
       <WorkLeft/>
       <WorkRight progress={progress}>
-        <div className="drop-shadow-2xl sm:mt-10 md:mt-24">
+        <div className=" ">
           <ProjectCard project={project} />
         </div>
       </WorkRight>
