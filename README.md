@@ -1,2 +1,2 @@
-Coded in Typescript with NextJS
-[Have a look here](https://priyesh.github.io/)
+Coded in Typescript with NextJS and Styled with Tailwind CSS
+[Have a look here](https://priyeshkadbe.github.io/)
