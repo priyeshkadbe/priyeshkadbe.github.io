@@ -1,11 +1,11 @@
 import { ReactNode } from 'react'
 
- interface RightSide {
+export interface WorkProps {
   children: ReactNode
   progress: number
 }
 
-export function RightSide({ children, progress }: RightSide) {
+export function WorkRight({ children, progress }: WorkProps) {
   const translateY = Math.max(-50, -(progress - 0.5) * 50)
 
   return (
