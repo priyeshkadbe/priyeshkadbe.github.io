@@ -35,7 +35,8 @@ export const CV = {
       country: "India",
       company: "DBlockchainers",
       title: "Full Stack Software Developer",
-      
+      description: "full time",
+      type:"full time",
       responsibilities: [
         {
           content: "Founded the business to cater for small scale catering needs",

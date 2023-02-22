@@ -32,6 +32,7 @@ function Experience() {
                     dateFrom={dateFrom}
                     dateTo={dateTo}
                     showDateRange
+                    description={description}
                     isLast={index === arr.length - 1}
                   />
 
