@@ -5,7 +5,7 @@ type ResumeSectionDateSidebarProps = {
   dateFrom: string | Date;
   dateTo: string | Date;
   isLast: boolean;
-  description: string;
+  description?: string;
   showDateRange: boolean;
   sidebar?: string;
 };
