@@ -1,5 +1,5 @@
 import Link from "next/link"
-//import { TECH } from "./tech-stack";
+import { TECH } from "./tech-stack";
 
 
 export const CV = {
@@ -22,97 +22,20 @@ export const CV = {
       city: "Nagpur",
       country: "India",
       institution: "Rastrasant Tukdoji Maharaj Nagpur University",
-      certificate: "Batchors of Engineering in Computer Science and Engineering",
+      certificate: "Batchors of Engineering in Computer Science & Engineering",
       level: "Graduation",
       type: [],
     }
   ],
   experience: [
     {
-      dateFrom: "2005-01-01",
-      dateTo: "2005-07-01",
-      city: "Mönchengladbach",
-      country: "Germany",
-      company: "Internet Cafe Matrix",
-      title: "IT Technical Assistant",
-      description: "",
-      type: ["web / tech dev"],
-      responsibilities: [
-        {
-          content: "Assisted in hardware infrastructure & wired network installation",
-          type: ["web / tech dev"],
-        },
-        {
-          content: "Created automated on-demand user-profile setup using Windows XP",
-          type: ["web / tech dev"],
-        },
-        {
-          content: "Programmed Windows XP user access roles to restrict sensitive file access",
-          type: ["web / tech dev"],
-        },
-        {
-          content: "Handling of day-to-day user queries & requests",
-          type: ["web / tech dev"],
-        },
-      ],
-    },
-    {
-      dateFrom: "2005-07-01",
-      dateTo: "2006-03-01",
-      city: "Mönchengladbach",
-      country: "Germany",
-      company: "Social Holding MG",
-      title: "Civilian Alternative Service",
-      type: [],
-      responsibilities: [
-        {
-          content: "Delivery of food for elderly people",
-          type: [],
-        },
-        {
-          content: "Caregiver to disabled individuals",
-          type: [],
-        },
-      ],
-    },
-    
-      
-    
-    {
-      dateFrom: "2009-07-01",
-      dateTo: "2010-06-01",
-      city: "Cape Town",
-      country: "South Africa",
-      company: "The Winchester Mansion Hotel",
-      title: "Junior Chef de Partie",
-      type: ["restaurant", "management"],
-      responsibilities: [
-        {
-          content: "Training as Saucier, Entremetier, Garde-manger, and Pâtissier",
-          type: ["restaurant"],
-        },
-        {
-          content: "Involved with the training of new staff",
-          type: ["restaurant"],
-        },
-        {
-          content: "Helped developing menus for special events",
-          type: ["restaurant"],
-        },
-        {
-          content: "Improved existing set-up and breakdown work procedures",
-          type: ["restaurant", "management"],
-        },
-      ],
-    },
-    {
       dateFrom: "2010-02-01",
       dateTo: "2018-01-01",
-      city: "Cape Town",
-      country: "South Africa",
-      company: "33 Degrees - Catering & Events",
-      title: "Founder & Caterer",
-      type: ["entrepreneurial", "restaurant", "management"],
+      city: "Banglore",
+      country: "India",
+      company: "DBlockchainers",
+      title: "Full Stack Software Developer",
+      
       responsibilities: [
         {
           content: "Founded the business to cater for small scale catering needs",
@@ -133,134 +56,75 @@ export const CV = {
         },
       ],
     },
-    {
-      dateFrom: "2010-07-01",
-      dateTo: "2011-06-01",
-      city: "Cape Town",
-      country: "South Africa",
-      company: "The Mount Restaurant",
-      title: "Chef de Partie / Junior Sous-Chef",
-      type: ["restaurant", "management"],
-      responsibilities: [
-        {
-          content: "Responsible for the smooth progress of work in the kitchen",
-          type: ["restaurant", "management"],
-        },
-        {
-          content: "Involved in the development of monthly specials",
-          type: ["restaurant"],
-        },
-        {
-          content:
-            "Created standard recipe files for all menu items and daily production worksheets",
-          type: ["restaurant", "management"],
-        },
-        {
-          content: "Assisted in purchasing and inventory management",
-          type: ["restaurant", "management"],
-        },
-      ],
-    },
-    {
-      dateFrom: "2011-11-01",
-      dateTo: "2012-05-01",
-      city: "",
-      country: "Caribbean & Mediterranean Sea",
-      company: "The Yachts of Seabourn – Six-Star Cruise Line",
-      title: "Waiter / Buffet Manager",
-      type: ["restaurant", "management"],
-      responsibilities: [
-        {
-          content: "Providing personalized restaurant service to guests",
-          type: ["restaurant"],
-        },
-        {
-          content: "Responsible for the buffet for breakfast and lunch",
-          type: ["restaurant", "management"],
-        },
-        {
-          content: "Training of new hired employees",
-          type: ["restaurant", "management"],
-        },
-        {
-          content: "Assisted in all other areas of the service operation",
-          type: ["restaurant"],
-        },
-        {
-          content: "Setup and preparation of service areas",
-          type: ["restaurant"],
-        },
-      ],
-    },
+
 
   ],
-  // capabilities: {
-  //   languages: [
-  //     {
-  //       name: "German - native",
-  //       Icon: null,
-  //     },
-  //     {
-  //       name: "English - bilingual",
-  //       Icon: null,
-  //     },
-  //     {
-  //       name: "French - basic",
-  //       Icon: null,
-  //     },
-  //   ],
-  //   programmingLanguages: [
-  //     TECH.typescript,
-  //     TECH.javascript,
-  //     TECH.html_5,
-  //     TECH.css_3,
-  //     TECH.sass,
-  //     TECH.graphql,
-  //     TECH.markdown,
-  //     TECH.liquid,
-  //     TECH.sql,
-  //     TECH.ruby,
-  //     TECH.php,
-  //   ],
-  //   librariesFrameworks: [
-  //     TECH.react,
-  //     TECH.tailwindcss,
-  //     TECH.nextjs,
-  //     TECH.trpc,
-  //     TECH.prisma,
-  //     TECH.react_query,
-  //     TECH.remix,
-  //     TECH.jest,
-  //     TECH.turborepo,
-  //     TECH.nodejs,
-  //     TECH.express,
-  //     TECH.webpack,
-  //     TECH.framer,
-  //     TECH.redis,
-  //   ],
-  //   serviceProviders: [
-  //     TECH.vercel,
-  //     TECH.aws,
-  //     TECH.firebase,
-  //     TECH.netlify,
-  //     TECH.planetscale,
-  //     TECH.github,
-  //   ],
-  //   dataProviders: [TECH.shopify, TECH.vend, TECH.erply, TECH.dear, TECH.micros, TECH.wordpress],
-  //   tools: [
-  //     TECH.intellij_idea,
-  //     TECH.git,
-  //     TECH.yarn,
-  //     TECH.npm,
-  //     TECH.illustrator,
-  //     TECH.photoshop,
-  //     TECH.figma,
-  //     TECH.postman,
-  //     TECH.ftp,
-  //     TECH.office,
-  //     TECH.dev_tools,
-  //   ],
-  // },
+  capabilities: {
+    languages: [
+      {
+        name: "Hindi - native",
+        Icon: null,
+      },
+      {
+        name: "English - bilingual",
+        Icon: null,
+      },
+      {
+        name: "Marathi - basic",
+        Icon: null,
+      },
+    ],
+    programmingLanguages: [
+      TECH.typescript,
+      TECH.javascript,
+      TECH.html_5,
+      TECH.css_3,
+      TECH.sass,
+      TECH.graphql,
+      TECH.markdown,
+      TECH.liquid,
+      TECH.sql,
+      TECH.ruby,
+      TECH.php,
+    ],
+    librariesFrameworks: [
+      TECH.react,
+      TECH.tailwindcss,
+      TECH.nextjs,
+      TECH.trpc,
+      TECH.prisma,
+      TECH.react_query,
+      TECH.remix,
+      TECH.jest,
+      TECH.turborepo,
+      TECH.express,
+      TECH.webpack,
+      TECH.framer,
+      TECH.redis,
+    ],
+    serviceProviders: [
+      TECH.vercel,
+      TECH.aws,
+      TECH.firebase,
+      TECH.netlify,
+      TECH.planetscale,
+      TECH.github,
+    ],
+  
+    tools: [
+      TECH.intellij_idea,
+      TECH.git,
+      TECH.yarn,
+      TECH.npm,
+      TECH.illustrator,
+      TECH.photoshop,
+      TECH.figma,
+      TECH.postman,
+      TECH.ftp,
+      TECH.office,
+      TECH.dev_tools,
+    ],
+  },
   certifications: [
     {
       date: "2016",
