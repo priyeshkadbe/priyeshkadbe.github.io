@@ -1,3 +1,16 @@
+type ResumeSectionDateEventsProps={
+  name:string,
+  organization:string,
+  city:string,
+  country:string,
+  dateFrom:string,
+  dateTo:string,
+  showDateRange:boolean,
+  description:string|undefined,
+  responsibilities:any,
+  bullets?:boolean,
+}
+
 export const ResumeSectionDateEvents = ({
   name,
   organization,
@@ -9,7 +22,7 @@ export const ResumeSectionDateEvents = ({
   description,
   responsibilities,
   bullets = true,
-}) => {
+}:ResumeSectionDateEventsProps) => {
   return (
     <main className="ml-0 spacing-1  md:ml-24 xl:ml-14 ">
       <h3 className="items-baseline text-md tracking-tight spacing-1 ">
@@ -19,15 +32,15 @@ export const ResumeSectionDateEvents = ({
         <span className="flex flex-wrap items-baseline gap-x-2 gap-y-0 print:!text-[16px]">
           {organization ? (
             <>
-              <span className="font-semibold text-gray-600 d:text-gray-400">
+              <h4 className=" text-gray-600 ">
                 {organization}
-              </span>
-              <span className="select-none text-sm text-gray-300 print:!text-gray-500">
+              </h4>
+              <span className="select-none text-sm text-gray-300 ">
                 -
               </span>
             </>
           ) : null}
-          <span className="text-gray-400/80 print:!text-gray-500">
+          <span className="text-gray-400/80 ">
             {city && country ? (
               <>
                 <span className="hidden print:!inline sm:inline">{city},</span>{" "}
@@ -76,7 +89,7 @@ export const ResumeSectionDateEvents = ({
         <ul className="list-outside list-disc pl-4 text-sm text-gray-500 marker:text-gray-400 d:text-gray-300/80 d:marker:text-gray-600 print:!text-base">
           {responsibilities.map((responsibility, index) => (
             <li className="pl-3" key={index}>
-              {responsibility.content}
+              <p className="text-sm font-[aeonikPro]">{responsibility.content}</p>
             </li>
           ))}
         </ul>

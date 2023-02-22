@@ -14,7 +14,7 @@ export const ResumeSection: FC<PropsWithChildren<{ title: string }>> = ({
   return (
     <section
       id={title}
-      className="max-w-sm px-4 md:max-w-6xl mt-4 mx-auto"
+      className="max-w-sm px-4 md:max-w-5xl my-8 mt-4 mx-auto"
       ref={sectionRef}
     >
       <header className=" ">
