@@ -5,7 +5,7 @@ import { CV } from "../../../constants/cv";
 function Capabilities() {
   return (
     <ResumeSection title="Capabilities">
-      <div className="">
+      {/* <div className="">
         <section className="m-4">
           <h3 className="items-baseline text-sm tracking-tight spacing-1 ">
             <h4 className=" text-xl">
@@ -54,7 +54,7 @@ function Capabilities() {
               .join(", ")}
           </p>
         </section>
-      </div>
+      </div> */}
     </ResumeSection>
   );
 }
