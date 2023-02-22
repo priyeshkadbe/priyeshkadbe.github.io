@@ -87,7 +87,7 @@ export const ResumeSectionDateEvents = ({
       ) : null}
       {bullets ? (
         <ul className="list-outside list-disc pl-4 text-sm text-gray-500 marker:text-gray-400 d:text-gray-300/80 d:marker:text-gray-600 print:!text-base">
-          {responsibilities.map((responsibility, index) => (
+          {responsibilities.map((responsibility:any, index:any) => (
             <li className="pl-3" key={index}>
               <p className="text-sm font-[aeonikPro]">{responsibility.content}</p>
             </li>
