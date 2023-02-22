@@ -5,6 +5,7 @@ type ResumeSectionDateSidebarProps = {
   dateFrom: string | Date;
   dateTo: string | Date;
   isLast: boolean;
+  description: string;
   showDateRange: boolean;
   sidebar?: string;
 };
@@ -12,6 +13,7 @@ export const ResumeSectionDateSidebar: FC<ResumeSectionDateSidebarProps> = ({
   dateFrom,
   dateTo,
   isLast,
+  description,
   showDateRange,
   sidebar = "",
 }) => {
