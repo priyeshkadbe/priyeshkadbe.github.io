@@ -39,6 +39,13 @@
 }
 
 
+@font-face {
+  font-family: workSans;
+  src: local("WorkSans-Regular.ttf"),
+    url("../fonts/WorkSans-Regular.ttf") format("truetype");
+ 
+}
+
 
 html {
   scroll-behavior: smooth;
