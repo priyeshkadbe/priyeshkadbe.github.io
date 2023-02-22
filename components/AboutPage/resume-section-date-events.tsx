@@ -24,12 +24,12 @@ export const ResumeSectionDateEvents = ({
   bullets = true,
 }:ResumeSectionDateEventsProps) => {
   return (
-    <main className="ml-0 spacing-1  md:ml-24 xl:ml-14 ">
+    <main className="ml-0 spacing-1    ">
       <h3 className="items-baseline text-md tracking-tight spacing-1 ">
         <p  className="text-md md:text-xl font-[workSans]  ">
           {name}
         </p>{" "}
-        <span className="flex flex-wrap items-baseline gap-x-2 gap-y-0 print:!text-[16px]">
+        <span className="flex flex-wrap items-baseline gap-x-2 ">
           {organization ? (
             <>
               <h4 className=" text-gray-600 ">
@@ -43,7 +43,7 @@ export const ResumeSectionDateEvents = ({
           <span className="text-gray-400/80 ">
             {city && country ? (
               <>
-                <span className="hidden print:!inline sm:inline">{city},</span>{" "}
+                <span className="hidden  sm:inline">{city},</span>{" "}
                 {country}
               </>
             ) : (
@@ -54,16 +54,16 @@ export const ResumeSectionDateEvents = ({
             )}
           </span>
         </span>
-        <div className="flex gap-2 whitespace-nowrap text-xs font-semibold text-gray-500 d:text-gray-400 print:!hidden md:hidden">
+        <div className="flex gap-2 whitespace-nowrap text-xs font-semibold text-gray-500  md:hidden">
           {showDateRange ? (
-            <>
+            <div className="flex">
               <span>
                 {new Date(dateFrom)?.toLocaleDateString("en-GB", {
                   month: "short",
                   year: "numeric",
                 })}
               </span>
-              <span>-</span>
+              <span className="font-bold">-</span>
               <span>
                 {Date.now() > new Date(dateTo).getTime()
                   ? new Date(dateTo)?.toLocaleDateString("en-GB", {
@@ -72,7 +72,7 @@ export const ResumeSectionDateEvents = ({
                     })
                   : "Current"}
               </span>
-            </>
+            </div>
           ) : (
             <span>
               {new Date(dateTo)?.toLocaleDateString("en-GB", {
@@ -86,18 +86,18 @@ export const ResumeSectionDateEvents = ({
         <p className="text-sm leading-relaxed text-gray-600">{description}</p>
       ) : null}
       {bullets ? (
-        <ul className="list-outside list-disc pl-4 text-sm text-gray-500 marker:text-gray-400 d:text-gray-300/80 d:marker:text-gray-600 print:!text-base">
+        <ul className="list-outside list-disc pl-4 text-sm text-gray-500 ">
           {responsibilities.map((responsibility:any, index:any) => (
             <li className="pl-3" key={index}>
-              <p className="text-sm font-[aeonikPro]">{responsibility.content}</p>
+              <p className="text-sm md:text-md font-[aeonikPro]">{responsibility.content}</p>
             </li>
           ))}
         </ul>
       ) : (
         <>
-          {responsibilities.map((responsibility, index) => (
+          {responsibilities.map((responsibility:any, index:any) => (
             <p
-              className=" text-sm text-gray-500 marker:text-gray-400 d:text-gray-300/80 d:marker:text-gray-600 print:!text-base"
+              className=" text-sm md:text-md text-gray-500 "
               key={index}
             >
               {responsibility.content}

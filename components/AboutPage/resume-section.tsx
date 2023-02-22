@@ -19,7 +19,7 @@ export const ResumeSection: FC<PropsWithChildren<{ title: string }>> = ({
     >
       <header className=" ">
         <h2 className="flex items-baseline gap-x-sm">
-          <h1 className="flex items-baseline text-3xl font-bold tracking-tight ">
+          <h1 className="flex items-baseline text-3xl font-bold tracking-wider ">
             <span className="">{title}</span>
             <hr className="ml-6 mr-24 hidden border-dashed " />
           </h1>
@@ -42,7 +42,7 @@ export const ResumeSection: FC<PropsWithChildren<{ title: string }>> = ({
         ref={sectionContentRef}
         className="relative transition-all duration-200 ease-linear "
       >
-        <div className="transition-[all,height] delay-[0s,0.2s]">
+        <div className="transition-[all,height] delay-[0s,0.2s] px-6">
           {showSection && children}
         </div>
       </main>
