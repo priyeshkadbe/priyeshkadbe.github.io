@@ -6,7 +6,7 @@ type ResumeSectionDateEventsProps={
   dateFrom:string,
   dateTo:string,
   showDateRange:boolean,
-  description:string|undefined,
+  description?:string|undefined,
   responsibilities:any,
   bullets?:boolean,
 }
