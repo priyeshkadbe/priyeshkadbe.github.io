@@ -30,12 +30,17 @@ const Globe = () => {
   }, []);
 
   return (
-    <div className="absolute  z-0 " >
-      <div className="globe js-globe">
+    <div className="absolute  z-0 ">
+      {/* <div className="globe js-globe">
         <div className="svg-wrapper"></div>
         <ul className="globe-list js-list"></ul>
         <canvas className="globe-canvas js-canvas"></canvas>
-      </div>
+      </div> */}
+      <div className="svg-wrapper"></div>
+
+      <ul className="globe-list js-list"></ul>
+
+      <canvas className="globe-canvas js-canvas"></canvas>
     </div>
   );
 };

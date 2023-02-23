@@ -42,7 +42,7 @@ export default function Hero(): ReactElement {
             <div className="-mt-36">
               <div ref={ref} className="flex cursor-default flex-col space-y-2">
                 <FadeUp duration={0.6}>
-                 <p className="">Welcome to my site. I'm </p>
+                 <p className="px-2 tracking-wider">Welcome to my site. I'm </p>
                   <h1 className="text-5xl font-semibold sm:text-7xl md:text-9xl ">
                     Priyesh Kadbe
                   </h1>
