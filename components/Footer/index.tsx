@@ -46,14 +46,14 @@ function Footer() {
           <h4 className="uppercase text-lg font-bold tracking-widest">
             Support My Work
           </h4>
-          <div className="space-y-2  w-full flex items-center md:items-start flex-col">
+          <div className="space-y-2 m  w-full flex items-center md:items-start flex-col">
             {footer.support.buymeacoffee !== "" && (
               <div className="hover:bg">
                 <a
                   href={`https://buymeacoffee.com/${footer.support.buymeacoffee}`}
                   target="_blank"
                 >
-                  <div className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity">
+                  <div className="h-12 mx-4   hover:opacity-80 opacity-100 transition-opacity">
                     {buyMeCoffeeSVG()}
                   </div>
                 </a>
@@ -65,7 +65,7 @@ function Footer() {
                   href={`https://paypal.me/${footer.support.paypal}`}
                   target="_blank"
                 >
-                  <div className="h-12 mr-2 hover:opacity-80 opacity-100 transition-opacity flex justify-center">
+                  <div className="h-12  mx-4  hover:opacity-80 opacity-100 transition-opacity flex justify-center">
                     {paypalSVG()}
                   </div>
                 </a>
