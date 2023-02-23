@@ -8,7 +8,7 @@ function ContactPage() {
 
   return (
     <div
-      className=" flex  justify-center  h-screen mx-auto"
+      className="relative flex  justify-center  h-screen mx-auto"
       style={{ maxWidth: "1200px", minHeight: "110vh" }}
     >
       <Globe />
