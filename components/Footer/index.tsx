@@ -42,7 +42,7 @@ function Footer() {
     {/* <div className=" mt-4 md:mt-0  flex items-center  flex-col"> */}
 
       <h4 className="uppercase text-lg font-bold tracking-widest">Support My Work</h4>
-      <div className="space-y-2  w-full flex items-center sm:items-start flex-col">
+      <div className="space-y-2  w-full flex items-center md:items-start flex-col">
         {footer.support.buymeacoffee !== "" && (
           <div className="hover:bg">
             <a

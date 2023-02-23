@@ -184,14 +184,14 @@ input:-webkit-autofill:focus {
     transform: translateX(-16px);
     opacity: 0;
     transition: opacity 300ms ease, transform 300ms ease, width 300ms ease,
-      border-color 300ms ease;
+    border-color 300ms ease;
     width: 0px;
     white-space: nowrap;
   }
 
   .menuRendered {
     opacity: 1;
-    @apply bg-[#f1f1f1] dark:bg-[#0C0D0C];
+    @apply bg-[#f1f1f1] dark:bg-[#111111];
   }
 
   .menuRendered li {
