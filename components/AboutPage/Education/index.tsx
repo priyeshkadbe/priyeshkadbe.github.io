@@ -36,8 +36,6 @@ function Education() {
                   dateFrom={dateFrom}
                   dateTo={dateTo}
                   showDateRange={false}
-                  description=""
-                  responsibilities={[]}
                 />
               </section>
             );
