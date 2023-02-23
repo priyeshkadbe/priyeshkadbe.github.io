@@ -14,11 +14,11 @@ export const Tile = ({ page, children }: TileProps) => {
 
   let opacity = Math.min(1, Math.max(0, progress * 4));
 
-  if (progress > 0.85 && page < numOfPages - 1) {
+  if (progress > 0.85 && page < numOfPages + 1) {
     opacity = Math.max(0, (1.0 - progress) * 4);
   }
 
-  const isLastProject = page === numOfPages - 1;
+  const isLastProject = page === numOfPages +1;
 
   return (
     <div
@@ -26,7 +26,7 @@ export const Tile = ({ page, children }: TileProps) => {
       className="absolute top-0 w-full "
       style={{
         opacity,
-        pointerEvents: progress >= 0 || progress >= 1 ? "none" : undefined,
+        pointerEvents: "auto",
       }}
     >
       {cloneElement(children,{ isLastProject })}

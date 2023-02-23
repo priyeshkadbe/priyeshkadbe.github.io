@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { kebabCase } from "../../utils/utils";
 import Link from "next/link";
 import { Project } from "../../types/interfaces";
@@ -14,11 +15,41 @@ function ProjectCard({ project }: props) {
 
   const borderColor = borderColors[project.id % borderColors.length]; // Access the color based on the project.id
 
+  const [hover, setHover] = useState(false);
+
+  const handleHover = () => {
+    setHover(!hover);
+  };
+
+  const cardStyle = {
+
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    zIndex: hover ? 1 : 'auto', // adjust z-index on hover
+    cursor: hover ? 'pointer' : 'default', // change cursor on hover
+  };
+
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    display: hover ? 'flex' : 'none',
+    justifyContent: 'center',
+    alignItems: 'center',
+    pointerEvents: hover ? 'auto' : 'none', // allow clicks on overlay when hover is active
+  };
 
   return (
     <div
     className={`group max-w-sm mx-auto flex flex-col  md:justify-center  p-2 my-4 md:my-0   md:p-4 rounded-sm project-card-wrapper `}
     key={project.id}
+    
+    onMouseEnter={handleHover}
+    onMouseLeave={handleHover}
     >
       <a
         href={project.link || project.github}
