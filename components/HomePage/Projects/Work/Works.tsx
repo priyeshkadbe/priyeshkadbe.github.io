@@ -11,18 +11,16 @@ import projects from "../../../../utils/project";
 export default function Works() {
   const MAX_DISPLAY_ITEMS = 3;
   return (
-    <TileWrapper numOfPages={projects.length}>
+    <TileWrapper numOfPages={ MAX_DISPLAY_ITEMS}>
       <TileContent>
-      {projects.slice(0, MAX_DISPLAY_ITEMS).map((item, i) => (
-      <Tile page={i} key={item.title}>
-        <WorkContent project={item}  />
-      </Tile>
-    ))}
-    {/* {projects.length > MAX_DISPLAY_ITEMS && (
-      <Link className="view-more-link" href="/projects">
-        View More
-      </Link>
-    )} */}
+        {projects.slice(0, MAX_DISPLAY_ITEMS).map((item, i) => (
+          <Tile page={i} key={item.title}>
+            <WorkContent
+              project={item}
+              isLast={i === MAX_DISPLAY_ITEMS - 1}
+            />
+          </Tile>
+        ))}
       </TileContent>
     </TileWrapper>
   );

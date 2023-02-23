@@ -26,8 +26,6 @@ export default function TileWrapper({ children, numOfPages }: WrapperProps) {
     currentPage = percentY * numOfPages
   }
 
-  const MAX_DISPLAY_ITEMS = 3;
-
 
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>
