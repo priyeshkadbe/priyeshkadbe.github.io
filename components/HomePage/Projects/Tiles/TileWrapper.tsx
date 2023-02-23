@@ -5,6 +5,7 @@ import { TileContext } from './TileContext'
 interface WrapperProps {
   children: ReactNode
   numOfPages: number
+
 }
 
 export default function TileWrapper({ children, numOfPages }: WrapperProps) {
@@ -24,6 +25,9 @@ export default function TileWrapper({ children, numOfPages }: WrapperProps) {
 
     currentPage = percentY * numOfPages
   }
+
+  const MAX_DISPLAY_ITEMS = 3;
+
 
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>

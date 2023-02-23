@@ -166,8 +166,26 @@ input:-webkit-autofill:focus {
   .project-tags-group-hover {
     @apply border-[0.1px];
     @apply border-dotted;
-    @apply border-[#1010111] dark:border-[#f8f8f8];
+    @apply border-[#101011] dark:border-[#f8f8f8];
   }
+
+  .current-page{
+    @apply text-[#101011] dark:text-[#f8f8f8];
+  }
+
+  .contact-button-wrapper{
+    @apply cursor-pointer;
+    @apply border border-dashed px-2 py-1;
+    @apply  border-[#101011] dark:border-[#f8f8f8];
+  }
+
+
+
+  .contact-button-wrapper:hover{
+    @apply border border-dotted;
+    
+  }
+
 
   .menu {
     margin: 0;

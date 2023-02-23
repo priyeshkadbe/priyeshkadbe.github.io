@@ -18,6 +18,8 @@ export const Tile = ({ page, children }: TileProps) => {
     opacity = Math.max(0, (1.0 - progress) * 4);
   }
 
+  const isLastProject = page === numOfPages - 1;
+
   return (
     <div
       ref={refContainer}
@@ -27,7 +29,7 @@ export const Tile = ({ page, children }: TileProps) => {
         pointerEvents: progress >= 0 || progress >= 1 ? "none" : undefined,
       }}
     >
-      {cloneElement(children)}
+      {cloneElement(children,{ isLastProject })}
     </div>
   );
 };
