@@ -5,5 +5,5 @@ interface WorkProps {
 }
 
 export function WorkContainer({ children }: WorkProps) {
-  return <div className="grid min-h-screen w-full grid-cols-2 md:grid-cols-2 ">{children}</div>
+  return <div className="grid min-h-screen w-full grid-cols-1 md:grid-cols-2 ">{children}</div>
 }

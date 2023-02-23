@@ -73,7 +73,7 @@ export default function Mobile() {
       </div>
       {isMenuMounted && (
         <ul
-          className={`menu flex flex-col absolute bg-gray-900
+          className={`menu flex flex-col absolute 
         ${isMenuRendered && "menuRendered"}`}
         >
           {routes.map((item, index) => {
@@ -82,7 +82,7 @@ export default function Mobile() {
                 className="border-b mobile-navbar-bottom   "
                 style={{ transitionDelay: `${150 + index * 25}ms` }}
               >
-                <Link href={item.path} className="flex w-auto p-4 font-[aeonikMono]">
+                <Link href={item.path} className="flex w-auto p-4 text-xl font-[aeonikMono]">
                   {item.title}
                 </Link>
               </li>
