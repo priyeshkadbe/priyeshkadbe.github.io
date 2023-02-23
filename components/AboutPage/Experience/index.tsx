@@ -5,7 +5,7 @@ import { CV } from "../../../constants/cv";
 function Experience() {
   return (
     <ResumeSection title="Experience">
-      <div className="spacing-8">
+      {/* <div className="spacing-8">
         {CV.experience.map(
           (
             {
@@ -52,7 +52,7 @@ function Experience() {
             );
           }
         )}
-      </div>
+      </div> */}
     </ResumeSection>
   );
 }

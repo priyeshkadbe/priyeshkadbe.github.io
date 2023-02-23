@@ -30,7 +30,7 @@ export const ResumeSectionDateSidebar: FC<ResumeSectionDateSidebarProps> = ({
                         month: "short",
                         year: "numeric",
                       })}
-                      <span className="hidden md:block text-gray-400"> - </span>
+                      <span className="hidden md:block text-white"> - </span>
                     </div>
                     <div className="whitespace-nowrap">
                       {Date.now() > new Date(dateTo).getTime()
@@ -38,7 +38,7 @@ export const ResumeSectionDateSidebar: FC<ResumeSectionDateSidebarProps> = ({
                             month: "short",
                             year: "numeric",
                           })
-                        : "Current"}
+                        : "Present"}
                     </div>
                   </div>
                 : <span className="whitespace-nowrap">

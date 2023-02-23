@@ -7,8 +7,8 @@ function Capabilities() {
     <ResumeSection title="Capabilities">
       <div className="">
         <section className="m-4">
-          <h3 className="items-baseline text-sm tracking-tight spacing-1 ">
-            <h4 className=" text-xl">
+          <h3 className="items-baseline text-sm tracking-wider spacing-1 ">
+            <h4 className=" text-md md:text-xl font-[workSans]">
               Languages
             </h4>
           </h3>
@@ -19,8 +19,8 @@ function Capabilities() {
           </p>
         </section>
         <section className="m-4">
-          <h3 className="items-baseline text-sm tracking-tight spacing-1 ">
-            <h4 className=" text-xl">
+          <h3 className="items-baseline text-sm tracking-wider spacing-1 ">
+            <h4 className=" text-md md:text-xl font-[workSans]">
               Programming Languages
             </h4>
           </h3>
@@ -31,8 +31,8 @@ function Capabilities() {
           </p>
         </section>
         <section className="m-4">
-          <h3 className="items-baseline text-sm tracking-tight spacing-1 ">
-            <h4 className=" text-xl">
+          <h3 className="items-baseline text-sm tracking-wider spacing-1 ">
+            <h4 className=" text-md md:text-xl font-[workSans]">
               Libraries & Frameworks
             </h4>
           </h3>
@@ -43,8 +43,8 @@ function Capabilities() {
           </p>
         </section>
         <section className="m-4">
-          <h3 className="items-baseline text-sm tracking-tight spacing-1 ">
-            <h4 className=" text-xl">
+          <h3 className="items-baseline text-sm tracking-wider spacing-1 ">
+            <h4 className=" text-md md:text-xl font-[workSans]">
               Tools
             </h4>{" "}
           </h3>
