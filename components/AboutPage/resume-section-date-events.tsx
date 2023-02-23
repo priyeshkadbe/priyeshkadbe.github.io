@@ -6,9 +6,7 @@ type ResumeSectionDateEventsProps={
   dateFrom:string,
   dateTo:string,
   showDateRange:boolean,
-  description?:string|undefined,
-  responsibilities:any,
-  bullets?:boolean,
+  projects?:any
 }
 
 export const ResumeSectionDateEvents = ({
@@ -19,9 +17,7 @@ export const ResumeSectionDateEvents = ({
   dateFrom,
   dateTo,
   showDateRange,
-  description,
-  responsibilities,
-  bullets = true,
+
 }:ResumeSectionDateEventsProps) => {
   return (
     <main className="ml-0 spacing-1    ">
@@ -82,29 +78,6 @@ export const ResumeSectionDateEvents = ({
           )}
         </div>
       </h3>
-      {description ? (
-        <p className="text-sm leading-relaxed text-gray-600">{description}</p>
-      ) : null}
-      {bullets ? (
-        <ul className="list-outside list-disc pl-4 text-sm text-gray-500 ">
-          {responsibilities.map((responsibility:any, index:any) => (
-            <li className="pl-3" key={index}>
-              <p className="text-sm md:text-md font-[aeonikPro]">{responsibility.content}</p>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <>
-          {responsibilities.map((responsibility:any, index:any) => (
-            <p
-              className=" text-sm md:text-md text-gray-500 "
-              key={index}
-            >
-              {responsibility.content}
-            </p>
-          ))}
-        </>
-      )}
     </main>
   );
 };

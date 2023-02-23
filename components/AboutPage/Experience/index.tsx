@@ -5,7 +5,7 @@ import { CV } from "../../../constants/cv";
 function Experience() {
   return (
     <ResumeSection title="Experience">
-      {/* <div className="spacing-8">
+      <div className="spacing-8">
         {CV.experience.map(
           (
             {
@@ -14,10 +14,7 @@ function Experience() {
               city,
               country,
               title,
-              responsibilities,
               company,
-              description,
-              type,
             },
             index,
             arr
@@ -32,7 +29,6 @@ function Experience() {
                     dateFrom={dateFrom}
                     dateTo={dateTo}
                     showDateRange
-                    description={description}
                     isLast={index === arr.length - 1}
                   />
 
@@ -44,15 +40,14 @@ function Experience() {
                     dateFrom={dateFrom}
                     dateTo={dateTo}
                     showDateRange
-                    description={description}
-                    responsibilities={responsibilities}
+                   
                   />
                 </div>
               </section>
             );
           }
         )}
-      </div> */}
+      </div>
     </ResumeSection>
   );
 }
