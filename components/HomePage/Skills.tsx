@@ -26,9 +26,9 @@ function Skills() {
       <div className="flex justify-center md:mx-auto max-w-3xl md:max-w-4xl flex-wrap">
         <div className="flex flex-wrap mx-auto">
           {technos.map((techno, i) => (
-            <span className="p-4 md:p-6" key={i}>
+            <div className="p-4 md:p-6 skill-icons" key={i}>
               {techno}
-            </span>
+            </div>
           ))}
         </div>
       </div>

@@ -132,6 +132,10 @@ input:-webkit-autofill:focus {
     @apply text-[#121212] dark:text-[#f1f1f1];
   }
 
+  .skill-icons{
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
   .laptop-nav-element:hover {
     @apply underline;
     @apply transition;
