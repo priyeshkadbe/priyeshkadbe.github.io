@@ -9,7 +9,7 @@ export function WorkRight({ children }: WorkProps) {
     <div
       className="flex h-screen flex-1 justify-center md:items-center"
     >
-      <div className=" mx-4 ">{children}</div>
+      <div className=" mx-4 mt-20 md:mt-0">{children}</div>
     </div>
   )
 }
