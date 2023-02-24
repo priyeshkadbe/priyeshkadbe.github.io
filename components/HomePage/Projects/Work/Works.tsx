@@ -6,7 +6,7 @@ import WorkContent from "./WorkContent";
 import projects from "../../../../utils/project";
 
 export default function Works() {
-  const MAX_DISPLAY_ITEMS = 3;
+  const MAX_DISPLAY_ITEMS = 4;
   const numProjects = projects.length;
   
   return (

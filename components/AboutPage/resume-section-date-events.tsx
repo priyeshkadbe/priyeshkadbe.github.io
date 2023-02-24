@@ -1,13 +1,21 @@
-type ResumeSectionDateEventsProps={
-  name:string,
-  organization:string,
-  city:string,
-  country:string,
-  dateFrom:string,
-  dateTo:string,
-  showDateRange:boolean,
-  projects?:any
-}
+type ProjectResponsibility = {
+  responsibility: string[];
+};
+
+type Projects = {
+  [projectName: string]: ProjectResponsibility;
+};
+
+type ResumeSectionDateEventsProps = {
+  name: string;
+  organization: string;
+  city: string;
+  country: string;
+  dateFrom: string;
+  dateTo: string;
+  showDateRange: boolean;
+  projects?: Projects;
+};
 
 export const ResumeSectionDateEvents = ({
   name,
@@ -17,23 +25,17 @@ export const ResumeSectionDateEvents = ({
   dateFrom,
   dateTo,
   showDateRange,
-
-}:ResumeSectionDateEventsProps) => {
+  projects,
+}: ResumeSectionDateEventsProps) => {
   return (
     <main className="ml-0 spacing-1    ">
       <h3 className="items-baseline text-md tracking-tight spacing-1 ">
-        <p  className="text-md md:text-xl font-[workSans]  ">
-          {name}
-        </p>{" "}
+        <p className="text-md md:text-xl font-[workSans]  ">{name}</p>{" "}
         <span className="flex flex-wrap items-baseline gap-x-2 ">
           {organization ? (
             <>
-              <h4 className=" text-gray-600 ">
-                {organization}
-              </h4>
-              <span className="select-none text-sm text-gray-300 ">
-                -
-              </span>
+              <h4 className=" text-gray-600 ">{organization}</h4>
+              <span className="select-none text-sm text-gray-300 ">-</span>
             </>
           ) : null}
           <span className="text-gray-400/80 ">
@@ -77,6 +79,22 @@ export const ResumeSectionDateEvents = ({
             </span>
           )}
         </div>
+        {projects && (
+          <div className="flex flex-col flex-wrap  md:mx-10">
+            {Object.entries(projects).map(([projectName, project]) => (
+              <div key={projectName}>
+                <h4 className="ml-4 md:ml-2">{projectName}</h4>
+                <ul className="list-outside list-disc  text-sm ">
+                  {project.responsibility.map((responsibility, index) => (
+                    <li className="list-disc ml-14 " key={index}>
+                      <p className="text-sm flex flex-wrap">{responsibility}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
       </h3>
     </main>
   );

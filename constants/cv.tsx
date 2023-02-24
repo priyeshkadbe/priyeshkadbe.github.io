@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { TECH } from "./tech-stack";
-
 export const CV = {
   intro: (
     <>
@@ -33,22 +32,21 @@ export const CV = {
       country: "India",
       company: "DBlockchainers",
       title: "Full Stack Software Developer",
-
       projects: {
         DBCN: {
-          content: [
+          responsibility: [
             "Event management from planning, purchasing, production, venue setup to on-the-day coordination.",
             "random",
           ],
         },
 
         Ollyswap: {
-          content:[
+          responsibility:[
             "random"
           ],
         },
         CoinspaceX:{
-          content: [
+          responsibility: [
             "random"
           ]
         }
@@ -89,4 +87,9 @@ export const CV = {
 
     tools: [TECH.git, TECH.yarn, TECH.npm, TECH.postman],
   },
+
+
+  skills:{
+    
+  }
 };

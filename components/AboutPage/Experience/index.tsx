@@ -15,6 +15,7 @@ function Experience() {
               country,
               title,
               company,
+              projects,
             },
             index,
             arr
@@ -40,7 +41,7 @@ function Experience() {
                     dateFrom={dateFrom}
                     dateTo={dateTo}
                     showDateRange
-                   
+                    projects={projects}
                   />
                 </div>
               </section>

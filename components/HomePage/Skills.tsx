@@ -1,57 +1,47 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect,useState, useRef,useContext } from "react";
 import { getTechnos } from "../../utils/technos";
+import { ScrollContext } from "../Globals/ScrollObserver";
+
+
 
 function Skills() {
-  const technos = getTechnos(60);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+   const [technos, setTechnos] = useState<string[]>([]);
+  const { scrollY } = useContext(ScrollContext);
 
   useEffect(() => {
-    const container = containerRef.current;
-    const content = contentRef.current;
-    let i = 0;
-    let reverse = false;
-    let direction = 1;
-
-    const startScroll = () => {
-      intervalRef.current = setInterval(() => {
-        if (content?.offsetWidth && container?.offsetWidth) {
-          if (i === content.offsetWidth +10) {
-            direction = -1;
-            reverse = true;
-          } else if (i === 0) {
-            direction = 1;
-            reverse = false;
-          }
-          container.scrollLeft += direction;
-          i += direction;
-        }
-      }, 90);
+    const updateTechnos = () => {
+      const newTechnos = window.innerWidth > 768 ? getTechnos(80) : getTechnos(40);
+      setTechnos(newTechnos);
     };
 
-    startScroll();
-
-    return () => {
-      clearInterval(intervalRef.current!);
-    };
+    updateTechnos();
+    window.addEventListener("resize", updateTechnos);
+    return () => window.removeEventListener("resize", updateTechnos);
   }, []);
 
-
   return (
-    <div className="mx-auto max-w-sm md:max-w-6xl flex flex-col md:flex-col justify-center mt-20 ">
-      <span className=" font-bold text-4xl mx-auto text-center my-6 tracking-widest">
+    <div
+     
+      className="flex h-screen flex-col gap-y-10 relative z-10 "
+      id="skills"
+      
+    >
+      <h4
+        className="max-w-3xl font-bold text-4xl md:text-7xl mx-auto text-center my-6 tracking-widest"
+      >
         MY FAVORITE EDGE TECHNOLOGIES
-      </span>
-      <div className="flex my-10 mx-4">
-        <div className="flex overflow-hidden" ref={containerRef}>
-          <div className="skills-content " ref={contentRef}>
-            {technos.map((techno, i) => (
-              <span className="h-20 w-20 md:h-40 md:w-40" key={i}>
-                {techno}
-              </span>
-            ))}
-          </div>
+      </h4>
+      <div
+        
+        className="flex justify-center mx-auto max-w-md md:max-w-4xl flex-wrap"
+         
+      >
+        <div  className="flex flex-wrap">
+          {technos.map((techno, i) => (
+            <span className="p-4" key={i}>
+              {techno}
+            </span>
+          ))}
         </div>
       </div>
     </div>
@@ -59,3 +49,7 @@ function Skills() {
 }
 
 export default Skills;
+
+
+
+

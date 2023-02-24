@@ -12,10 +12,10 @@ export function WorkLeft() {
        style={{ transform: `translateY(${translateY}px)` }}
     >
       
-      <h2 className=" mx-4 max-w-sm flex-wrap font-bold text-4xl md:max-w-md text-center font-[aeonikMedium] my-6 md:text-7xl tracking-wider" >
-          HERE ARE A FEW OF MY FAVORITE PROJECTS
+      <h1 className=" mx-4 max-w-sm flex-wrap font-bold text-4xl md:max-w-md text-center font-[aeonikMedium] my-6 md:text-7xl tracking-wider" >
+          HERE ARE  FEW OF MY FAVORITE PROJECTS
           {/* Here are a few of my Projects */}
-        </h2>
+        </h1>
     </div>
   )
 }
