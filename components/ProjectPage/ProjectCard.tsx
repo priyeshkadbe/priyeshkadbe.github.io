@@ -31,24 +31,23 @@ function ProjectCard({ project }: props) {
       <div className="w-full mt-5">
         <div className="flex  justify-between items-center gap-x-4">
           <a href={project.link || project.github} target="_blank">
-            <h3 className="text-lg ml-2 group-hover:font-[aeonikMedium] group-hover:font-bold">{project.title}</h3>
+            <h3 className="text-lg ml-2 group-hover:font-[aeonikMedium] group-hover:font-bold group-active:font-bold">{project.title}</h3>
           </a>
           <div className="space-x-2">
             {project.link && (
-              <Link href={project.link} target="_blank" rel="noreferrer" className="font-extralight group-hover:text-[#ff4800] group-hover:underline">
+              <Link href={project.link} target="_blank" rel="noreferrer" className="font-extralight group-hover:text-[#ff4800] group-active:text-[#ff4800] group-hover:underline">
                 {/* <Image
                   src="/static/icons/external-link.svg"
                   width={16}
                   height={16}
                   alt="Link Icon"
                 /> */}
-                
                   live 
                 
               </Link>
             )}
             {project.github && (
-              <Link href={project.github} target="_blank" rel="noreferrer"  className="font-extralight group-hover:text-[#ff4800] group-hover:underline">
+              <Link href={project.github} target="_blank" rel="noreferrer"  className="font-extralight group-hover:text-[#ff4800] group-active:text-[#ff4800] group-hover:underline">
                 {/* <Image
                   src="/static/icons/github.svg"
                   width={16}
@@ -60,13 +59,13 @@ function ProjectCard({ project }: props) {
             )}
           </div>
         </div>
-        <p className="text-left ml-2 text-sm group-hover:font-bold">{project.desc}</p>
+        <p className="text-left ml-2 text-sm group-hover:font-bold group-active:font-bold">{project.desc}</p>
         <ul className="flex flex-wrap ml-2 items-center mt-2  list-none">
           {project.tags.map((tag: string, index: number) => {
             return (
               <li key={tag}>
                 <Link href={`/projects/tag/${kebabCase(tag)}`}>
-                  <div  className="m-1 group-hover:project-tags-group-hover  project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 " >
+                  <div  className="m-1 group-hover:project-tags-group-hover  group-active:project-tags-group-hover project-tags  text-sm  py-1 px-2 cursor-pointer hover:opacity-75 " >
                     {tag}
                   </div>
                 </Link>

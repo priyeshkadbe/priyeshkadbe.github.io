@@ -159,6 +159,21 @@ input:-webkit-autofill:focus {
     transition: background-color 0.2s ease-in-out;
   }
 
+
+
+
+
+  .project-card-wrapper:active {
+    @apply bg-[#f4f4f4] dark:bg-[#101011];
+    @apply cursor-pointer;
+    @apply border-[0.5px];
+    @apply border-dashed;
+    @apply border-[#101011] dark:border-[#f8f8f8];
+    transition: background-color 0.2s ease-in-out;
+  }
+
+
+
   .group:hover .project-card-wrapper {
   }
 
