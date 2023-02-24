@@ -35,14 +35,13 @@ export const ResumeSectionDateEvents = ({
           {organization ? (
             <>
               <h4 className=" text-gray-600 ">{organization}</h4>
-              <span className="select-none text-sm text-gray-300 ">-</span>
+              <span className="select-none text-xl  ">-</span>
             </>
           ) : null}
           <span className="text-gray-400/80 ">
             {city && country ? (
               <>
-                <span className="hidden  sm:inline">{city},</span>{" "}
-                {country}
+                <span className="hidden  sm:inline">{city},</span> {country}
               </>
             ) : (
               <>
@@ -61,7 +60,7 @@ export const ResumeSectionDateEvents = ({
                   year: "numeric",
                 })}
               </span>
-              <span className="font-bold">-</span>
+               <span className="select-none text-xl  ">-</span>
               <span>
                 {Date.now() > new Date(dateTo).getTime()
                   ? new Date(dateTo)?.toLocaleDateString("en-GB", {
@@ -82,12 +81,14 @@ export const ResumeSectionDateEvents = ({
         {projects && (
           <div className="flex flex-col flex-wrap  md:mx-10">
             {Object.entries(projects).map(([projectName, project]) => (
-              <div key={projectName}>
-                <h4 className="ml-4 md:ml-2">{projectName}</h4>
-                <ul className="list-outside list-disc  text-sm ">
+              <div key={projectName} className="py-4">
+                <h4 className="ml-2 md:ml-0  md:text-xl">{projectName}</h4>
+                <ul className=" list-disc   ">
                   {project.responsibility.map((responsibility, index) => (
                     <li className="list-disc ml-14 " key={index}>
-                      <p className="text-sm flex flex-wrap">{responsibility}</p>
+                      <p className="text-sm md:text-lg py-1  tracking-wider flex flex-wrap">
+                        {responsibility}
+                      </p>
                     </li>
                   ))}
                 </ul>
