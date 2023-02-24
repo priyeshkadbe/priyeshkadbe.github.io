@@ -5,7 +5,8 @@ import {
   FaNpm,
   FaLinux,
   FaEthereum,
-  FaBootstrap
+  FaBootstrap,
+  FaHardHat,
 } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import {
@@ -20,23 +21,25 @@ import {
   SiTailwindcss,
   SiPostman,
   SiBinance,
-  SiWeb3Dotjs
+  SiWeb3Dotjs,
+  SiRedux,
 } from "react-icons/si";
 import { GoMarkGithub } from "react-icons/go";
-
 
 export const getTechnos = (size: number) => [
   <FaReact size={size} key="react" />,
   <TbBrandNextjs size={size} key="nextjs" />,
+  <SiRedux size={size} key="redux" />,
   <SiJavascript size={size} key="javascript" />,
   <SiTypescript size={size} key="javascript" />,
-  <FaEthereum size={size} key="Ethereum" />,
+  <FaEthereum size={size} key="ethereum" />,
+  <FaHardHat size={size} key="hardhat" />,
   <SiSolidity size={size} key="solidity" />,
   <SiWeb3Dotjs size={size} key="Web3.js" />,
   <FaNodeJs size={size} key="node" />,
   <SiExpress size={size} key="express" />,
   <FaEthereum size={size} key="ethereum" />,
-  <SiBinance size={size}  key="binance"/>,
+  <SiBinance size={size} key="binance" />,
   <SiChainlink size={size} key="chainlink" />,
   <SiMongodb size={size} key="mongo" />,
   <SiTailwindcss size={size} key="tailwindcss" />,
