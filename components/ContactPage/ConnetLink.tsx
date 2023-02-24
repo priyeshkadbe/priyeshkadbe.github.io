@@ -3,23 +3,20 @@ import Script from "next/script";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { SiGooglemeet } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
-import {  EMAIL } from "../../utils/constants";
-
-import Link from "next/link";
+import { EMAIL } from "../../utils/constants";
+import { useChatVisibleState } from "../../providers/ChatVisible.provider";
 
 interface props {
   viewCalendly: boolean;
   setViewCalendly: (value: boolean) => void;
 }
 
-function ConnectLink({ viewCalendly, setViewCalendly }: props) {
-  const [isChatBotScriptLoaded, setIsChatBotScriptLoaded] = useState(false);
+function Connectbutton({ viewCalendly, setViewCalendly }: props) {
+  const { setIsChatVisible } = useChatVisibleState();
 
-  function handleButtonClick() {
-    setIsChatBotScriptLoaded(true);
-  }
-
-  
+  const handleClick = () => {
+    window.location.href = `mailto:${EMAIL}`;
+  };
 
   return (
     <div
@@ -31,34 +28,35 @@ function ConnectLink({ viewCalendly, setViewCalendly }: props) {
       </span>
 
       <div className="flex flex-col md:mt-20 justify-between gap-x-10 gap-y-5 md:flex-row">
-        <Link
-          href="#"
+        <button
           className="flex flex-wrap justify-center flex-col connect-wrapper rounded-md"
+          onClick={() => {
+            setIsChatVisible(true);
+          }}
         >
           <TfiHeadphoneAlt className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Chat With Me</h2>
-        </Link>
+        </button>
 
-        <Link
-          href="#"
+        <button
           onClick={() => setViewCalendly(true)}
           className="flex flex-wrap justify-center  flex-col connect-wrapper rounded-md"
         >
           <SiGooglemeet className="mx-auto h-16 w-16 " />
           <h2 className="mx-auto">Book a Meeting</h2>
-        </Link>
+        </button>
 
-        <Link
-        type="button"
-          href={`mailto:${EMAIL}`}
+        <button
+          type="button"
+          onClick={handleClick}
           className="flex flex-wrap justify-center  flex-col connect-wrapper rounded-md"
         >
           <HiOutlineMail className="mx-auto h-16 w-16" />
           <h2 className="mx-auto">Send An Email</h2>
-        </Link>
+        </button>
       </div>
     </div>
   );
 }
 
-export default ConnectLink;
+export default Connectbutton;

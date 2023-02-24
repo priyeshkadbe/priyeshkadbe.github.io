@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { ScrollObserver } from "../components/Globals/ScrollObserver";
 import { AnimatePresence } from "framer-motion";
+import { ChatVisibleProvider } from "../providers/ChatVisible.provider";
 import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <AnimatePresence exitBeforeEnter initial={false}>
         <ScrollObserver>
-          <Component {...pageProps} />
+          <ChatVisibleProvider>
+            <Component {...pageProps} />
+          </ChatVisibleProvider>
         </ScrollObserver>
       </AnimatePresence>
     </ThemeProvider>

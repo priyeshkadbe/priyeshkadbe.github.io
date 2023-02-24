@@ -18,12 +18,12 @@ function ContactPage() {
           setViewCalendly={setViewCalendly}
         />
       ) : (
-        <>
+        <div className="z-10">
           <ConnectLink
             viewCalendly={viewCalendly}
             setViewCalendly={setViewCalendly}
           />
-        </>
+        </div>
       )}
     </div>
   );

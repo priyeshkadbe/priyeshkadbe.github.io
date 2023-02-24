@@ -4,6 +4,7 @@ import Laptop from "../Navbar/Laptop";
 import Mobile from "../Navbar/Mobile";
 import Footer from "../Footer";
 import { CRIPS_WEBSITE_ID } from "../../utils/constants";
+import { useChatVisibleState } from "../../providers/ChatVisible.provider";
 type Props = {
   children: React.ReactNode;
   currentPage: string;
@@ -16,9 +17,27 @@ function Layout({ children, currentPage }: Props) {
       : `Priyesh Kadbe - Full Stack Developer | ${currentPage} `
   }`;
 
+  const { isChatVisible } = useChatVisibleState();
+
   return (
     <>
       <Head>{pageTitle}</Head>
+      <Script
+        id="crisp-widget"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+           window.$crisp=[];
+           window.CRISP_WEBSITE_ID=\`${CRIPS_WEBSITE_ID}\`;
+           (function(){
+             const d = document;
+             const s = d.createElement("script");
+             s.src = "https://client.crisp.chat/l.js";
+             s.async = 1;
+             d.getElementsByTagName("head")[0].appendChild(s);
+           })();`,
+        }}
+      />
       <main>
         <div className="hidden md:block z-100">
           <Laptop currentPage={currentPage} />
@@ -27,23 +46,6 @@ function Layout({ children, currentPage }: Props) {
           <Mobile />
         </div>
         <div className="min-h-screen">{children}</div>
-
-        <Script
-          id="crisp-widget"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-      window.$crisp=[];
-      window.CRISP_WEBSITE_ID=\`${CRIPS_WEBSITE_ID}\`;
-      (function(){
-        const d = document;
-        const s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();`,
-          }}
-        />
       </main>
       <Footer />
     </>

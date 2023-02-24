@@ -112,7 +112,8 @@ input:-webkit-autofill:focus {
   }
 
   .connect-wrapper {
-    @apply bg-gray-300 dark:bg-[#444444];
+    @apply border border-dashed;
+    @apply border-gray-300 dark:border-gray-700;
     @apply p-4 md:p-8 gap-y-2 sm:gap-y-4;
     @apply cursor-pointer;
     transition: all 0.2s ease-in-out;
@@ -121,9 +122,7 @@ input:-webkit-autofill:focus {
     @apply bg-gray-300 dark:bg-gray-700;
   }
 
-  .theme-changer-icon {
-    @apply bg-red-300;
-  }
+  
   .return-home {
     @apply border-white;
   }

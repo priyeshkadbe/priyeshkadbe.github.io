@@ -30,7 +30,7 @@ export default function TileWrapper({ children, numOfPages }: WrapperProps) {
   return (
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
-        className="relative z-10 "
+        className="relative z-10  "
         ref={refContainer}
         style={{
           height: numOfPages * 100 + 'vh',
